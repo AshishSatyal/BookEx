@@ -5,29 +5,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create your new account</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Sign up your account</title>
+    <link rel="stylesheet" href="\css\signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="form_body">
-        <img src="logo.jpg" alt="error">
-        |
-    </div>
 
+
+    <div class="logo">
+        <img src="\css\logo.png" alt=" ">
+    </div>
     <form class="signup">
+
         <h2 class="text">Sign up</h2>
 
         <label>Username :</label> <br>
+        <div class="user_icon">
+            <i class="fa-solid fa-user"></i>
+        </div>
         <input type="text" name="Name" placeholder="Type your username"><br>
+
+
         <label>Email:</label> <br>
+        <div class="user_email">
+            <i class="fa-solid fa-envelope"></i>
+        </div>
         <input type="text" name="Email" placeholder="Type your Email"><br>
 
         <label>Password:</label> <br>
+        <div class="user_password">
+            <i class="fa-solid fa-lock"></i>
+        </div>
         <input type="password" name="Password" placeholder="Enter your password"><br>
+
+
         <label>confrim password:</label> <br>
+        <div class="re_password">
+            <i class="fa-solid fa-lock"></i>
+
+        </div>
         <input type="password" name="re_password" placeholder="Re-enter your password"><br>
         <button type="submit">Signup</button>
+
+        <p class="or">OR</p>
+        <div class="social">
+            <a href="#"><i class="fa-brands fa-google"></i> </a>
+            <a href="#"><i class="fa-brands fa-facebook"></i> </a>
+            <a href="#"><i class="fa-brands fa-twitter"></i> </a>
+        </div>
+
+        <p>Already a user? <a href="#">LOGIN</a></p>
 
     </form>
 
