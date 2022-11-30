@@ -1,32 +1,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap%27");
 
-*, *::before, *::after {
-    font-family: 'Poppins',sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    /* colors */
-    --primary-color: #f2ebe3;
-    --secondary-color: #e1c7a2;
-    --accent-color: #daaa63; /*includes btn-color*/
-    --txt-primary-color: #2c1810;
-    --txt-secondary-color: #000000;
-    --txt-color-light: #aaa;
+  /* colors */
+  --primary-color: #f2ebe3;
+  --secondary-color: #e1c7a2;
+  --accent-color: #daaa63; /*includes btn-color*/
+  --txt-primary-color: #2c1810;
+  --txt-secondary-color: #000000;
+  --txt-color-light: #aaa;
 
-    /* font sizes */
-    --fnt-size-title: 50px;
-    --fnt-size-heading: 40px;
-    --fnt-size-sub-heading: 30px;
-    --fnt-size-medium: 20px;
-    --fnt-size-norm: 18px;
-    --fnt-size-small: 16px;
-    --fnt-size-btn-mb: 10px;
+  /* font sizes */
+  --fnt-size-title: 50px;
+  --fnt-size-heading: 40px;
+  --fnt-size-sub-heading: 30px;
+  --fnt-size-medium: 20px;
+  --fnt-size-norm: 18px;
+  --fnt-size-small: 16px;
+  --fnt-size-btn-mb: 10px;
 
-    /* font weight  wght---> weight */
-    --fnt-wght-semi-bold: 400;
-    --fnt-wght-bold: 700;
-    --fnt-wght-thin: 200; 
-  }
+  /* font weight  wght---> weight */
+  --fnt-wght-semi-bold: 400;
+  --fnt-wght-bold: 700;
+  --fnt-wght-thin: 200;
+}

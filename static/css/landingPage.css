@@ -9,9 +9,11 @@
 }
 
 .navbar {
+  background-color: var(--primary-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 1.5rem;
 }
 .nav-links ul {
   display: flex;
@@ -25,8 +27,12 @@
 .nav-links li a {
   text-decoration: none;
   margin: 1rem;
+  color: var(--txt-primary-color);
+  transition: ease 1s;
 }
-
+.nav-links li a:hover {
+  color: var(--secondary-color);
+}
 .to-right {
   display: flex;
   margin: 1rem;
@@ -38,4 +44,25 @@
 .to-right li a {
   text-decoration: none;
   margin: 1rem;
+  color: var(--txt-secondary-color);
+  padding-right: 2rem;
+}
+.create-account-btn {
+}
+
+.btn-1 {
+  padding: 0.2rem;
+  border-radius: 15px;
+  background-color: var(--primary-color);
+  color: var(--txt-secondary-color);
+  border: 1px solid var(--accent-color);
+  transition: ease 1s;
+  font-weight: var(--fnt-wght-semi-bold);
+}
+
+.btn-1:hover {
+  background-color: var(--secondary-color);
+  border: 1px solid var(--accent-color);
+  color: var(--txt-primary-color);
+  cursor: pointer;
 }
