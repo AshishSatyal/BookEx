@@ -18,3 +18,40 @@
   --button-color: #F0D5A5;
   --text-color: #000000;
 }
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.nav-links ul{
+    display: flex;
+    list-style: none;
+
+}
+
+.logo{
+    margin: 1rem;
+}
+
+.nav-links li a{
+    text-decoration: none;
+    margin: 1rem;
+    
+}
+
+.to-right{
+    display: flex;
+    margin: 1rem;
+    padding-right: 3rem;
+    
+}
+.to-right ul{
+    list-style: none;
+}
+.to-right li a{
+    text-decoration: none;
+    margin: 1rem;
+}
+
