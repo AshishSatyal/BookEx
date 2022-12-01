@@ -66,3 +66,38 @@
   color: var(--txt-primary-color);
   cursor: pointer;
 }
+
+
+/* best selling books section */
+.best_selling_books_sec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.book_img_container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  cursor: grab;
+}
+
+.book_img {
+  width: 100px;
+  height: 160px;
+  background-color: var(--txt-color-light);
+  border: 1px solid var(--txt-secondary-color);
+}
+
+.buy_btn {
+  --width: 160px;
+  width: var(--width);
+  height: 55px;
+}
+
+.btn:hover {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  box-shadow: 0 1px 5px var(--accent-color);
+}

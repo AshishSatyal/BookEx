@@ -1,25 +1,18 @@
 @import url(style.css);
 
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
+    height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
-    height: 100vh;
-    background: url('hovering_book.jpg');
+    background-image: url('hovering_book.jpg');
     background-size: cover;
-    font-family: 'Poppins', sans-serif;
 }
 
 form {
     margin-top: 50px;
     text-align: left;
-
 }
 
 .logo {
@@ -40,13 +33,11 @@ form {
 .user_icon {
     position: absolute;
     top: calc(20%);
-
 }
 
 .user_email {
     position: absolute;
     top: calc(34%);
-
 }
 
 .user_password {
