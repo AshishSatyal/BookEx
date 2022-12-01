@@ -6,28 +6,27 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-image: url('hovering_book.jpg');
-    background-size: cover;
+    background: url('/images/hovering_book.jpg') no-repeat fixed center; /* bg-img bg-repeat bg-attachment bg-position */
+    background-size: cover; 
 }
 
-form {
-    margin-top: 50px;
+form.signup {
+    margin: 50px 0;
     text-align: left;
+    background-color: rgba(242, 241, 240, 0.75);
+    backdrop-filter: blur(5px);
+    border-radius: 16px;
+    padding: 25px;
+    /* min-width: 494;
+    min-height: 500; */
+    margin-top: 5px;
+    position: relative;
+    line-height: 1.25rem;
 }
 
 .logo {
     margin-top: 20px;
     margin-bottom: 5px;
-}
-
-.signup {
-    background-color: rgba(242, 241, 240, 0.75);
-    border-radius: 16px;
-    padding: 25px;
-    width: 494;
-    height: 500;
-    margin-top: 5px;
-    position: relative;
 }
 
 .user_icon {
@@ -53,6 +52,11 @@ form {
 
 form h2 {
     text-align: center;
+    margin: 10px 0 40px 0;
+}
+
+label {
+    font-weight: var(--fnt-wght-semi-bold);
 }
 
 input {
@@ -66,33 +70,22 @@ input {
     background: rgba(242, 241, 240, 0.75);
     background: transparent;
     padding-left: 20px;
-
-
 }
 
 .signup>button {
-    font-size: 20px;
-    width: 350px;
+    --width: 350px;
+    width: var(--width);
     height: 40px;
-    border-radius: 40px;
-    color: black;
-    background-color: #F0D5A5;
 }
 
-.or {
+.or,
+.social,
+.already_user
+{
     text-align: center;
+    margin: 20px;
 }
 
-p {
-    text-align: center;
-}
-
-.social {
-    text-align: center;
-    color: black;
-
-}
-
-.social>a {
+.social > a {
     text-decoration: none;
 }

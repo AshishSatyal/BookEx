@@ -31,6 +31,8 @@
   --fnt-wght-semi-bold: 500;
   --fnt-wght-bold: 700;
   --fnt-wght-thin: 200;
+
+  --transition: all 300ms ease-out; 
 }
 
 .heading {
@@ -50,4 +52,11 @@
   border: 2px solid var(--accent-color);
   border-radius: calc(var(--width) / 2);
   font-weight: var(--fnt-wght-semi-bold);
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  box-shadow: 0 1px 5px var(--accent-color);
 }
