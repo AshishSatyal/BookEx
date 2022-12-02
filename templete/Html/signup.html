@@ -27,40 +27,41 @@
       <img src="\css\logo.png" alt=" " />
     </div>
     <form class="signup">
-      <h2 class="text">Sign up</h2>
-
-      <label>Username :</label> <br />
+      <h2 class="text heading">Sign up</h2>
+      <label for="username">Username :</label> <br>
       <div class="user_icon">
         <i class="fa-solid fa-user"></i>
       </div>
-      <input type="text" name="Name" placeholder="Type your username" /><br />
+      <input type="text" name="Name" id="username" placeholder="Type your username" /><br>
 
-      <label>Email:</label> <br />
+      <label for="email">Email:</label> <br>
       <div class="user_email">
         <i class="fa-solid fa-envelope"></i>
       </div>
-      <input type="text" name="Email" placeholder="Type your Email" /><br />
+      <input type="text" name="Email" id="email" placeholder="Type your Email" /><br>
 
-      <label>Password:</label> <br />
+      <label for="password">Password:</label> <br>
       <div class="user_password">
         <i class="fa-solid fa-lock"></i>
       </div>
       <input
         type="password"
         name="Password"
+        id="password"
         placeholder="Enter your password"
       /><br />
 
-      <label>confrim password:</label> <br />
+      <label for="confirm_password">Confrim password:</label> <br />
       <div class="re_password">
         <i class="fa-solid fa-lock"></i>
       </div>
       <input
         type="password"
         name="re_password"
+        id="confirm_password"
         placeholder="Re-enter your password"
-      /><br />
-      <button type="submit">Signup</button>
+      /><br>
+      <button class="btn" type="submit">Signup</button>
 
       <p class="or">OR</p>
       <div class="social">
@@ -69,7 +70,7 @@
         <a href="#"><i class="fa-brands fa-twitter"></i> </a>
       </div>
 
-      <p>Already a user? <a href="#">LOGIN</a></p>
+      <p class="already_user">Already a user? <a href="#">LOGIN</a></p>
     </form>
   </body>
 </html>

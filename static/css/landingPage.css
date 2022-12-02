@@ -1,12 +1,4 @@
 @import url(style.css);
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap%27");
-
-* {
-  font-family: "Poppins", sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 .navbar {
   background-color: var(--primary-color);
@@ -64,4 +56,40 @@
   border: 1px solid var(--accent-color);
   color: var(--txt-primary-color);
   cursor: pointer;
+}
+
+
+/* best selling books section */
+.best_selling_books_sec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.book_img_container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  cursor: grab;
+}
+
+.book_img {
+  width: 100px;
+  height: 160px;
+  background-color: var(--txt-color-light);
+  border: 1px solid var(--txt-secondary-color);
+}
+
+.buy_btn {
+  position: relative;
+  --width: 160px;
+  width: var(--width);
+  height: 55px;
+  overflow: hidden;
+}
+
+.buy_btn::before {
+  --width: 160px;
+  --height: 55px;
 }
