@@ -14,6 +14,7 @@
   justify-content: space-between;
   align-items: center;
   margin: 1.5rem;
+  position: sticky;
 }
 .nav-links ul {
   display: flex;
@@ -46,8 +47,6 @@
   margin: 1rem;
   color: var(--txt-secondary-color);
   padding-right: 2rem;
-}
-.create-account-btn {
 }
 
 .btn-1 {
