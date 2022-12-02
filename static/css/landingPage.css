@@ -83,7 +83,14 @@
 }
 
 .buy_btn {
+  position: relative;
   --width: 160px;
   width: var(--width);
   height: 55px;
+  overflow: hidden;
+}
+
+.buy_btn::before {
+  --width: 160px;
+  --height: 55px;
 }

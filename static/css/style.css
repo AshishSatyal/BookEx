@@ -45,6 +45,7 @@
   color: var(--txt-color-light);
 }
 
+/*NOTE: add btn class for each and every buttons */
 .btn {
   cursor: pointer;
   background: transparent;
@@ -55,8 +56,27 @@
   transition: var(--transition);
 }
 
-.btn:hover {
+.btn::before {
+  content: '';
+  width: var(--width);
+  height: var(--height);
   background-color: var(--accent-color);
+  position: absolute;
+  top:0;
+  right: 0;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 300ms ease-out;
+}
+
+.btn:hover::before,
+.btn:hover {
+  transform: scaleX(1);
   color: var(--primary-color);
   box-shadow: 0 1px 5px var(--accent-color);
+}
+
+.btn:active {
+  box-shadow: 0 1px 16px var(--accent-color);
 }
