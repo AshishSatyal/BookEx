@@ -11,7 +11,6 @@ class UserForm(forms.ModelForm):
     
     class Meta():
         model = User
-        # adding fields other then the default ones
         fields = ('username', 'email', 'password')
     # if password != confirm_password:
     #     raise forms.ValidationError("MAKE SURE YOUR PASSWORD MATCHES!")
