@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 django = "*"
+argon2-cffi = "*"
 
 [dev-packages]
 

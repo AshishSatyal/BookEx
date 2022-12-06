@@ -19,7 +19,7 @@ from bookexapp import views
 
 urlpatterns = [
     path('',views.landingpage, name='landingpage'),
-    path('signup/',views.user_signup, name='signup'),
+    path('signup/',views.signup, name='signup'),
     path('admin/', admin.site.urls),
     path('bookexapp/', include('bookexapp.urls')),
     
