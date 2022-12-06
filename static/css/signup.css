@@ -78,6 +78,11 @@ input {
     height: 40px;
 }
 
+.signup > button::before {
+    --width: 350px;
+    --height: 40px;
+}
+
 .or,
 .social,
 .already_user
@@ -88,4 +93,57 @@ input {
 
 .social > a {
     text-decoration: none;
+}
+
+.modal_container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(32, 37%, 92%, 0.3);
+    display: none;
+    align-items: center;
+    justify-content: center;  
+    transform-origin: center; 
+    user-select: none;
+}
+
+body:has(.active),
+body:has(.active) .modal_container {
+    display: flex;
+    overflow: hidden;
+}
+
+.modal {
+    position: relative;
+    width: 60%;
+    height: 60%;
+    padding: 2rem .5rem;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--accent-color);
+    font-size: var(--fnt-size-sub-heading);
+    font-weight: var(--fnt-wght-semi-bold);
+    box-shadow: 0 0 5px var(--accent-color);
+}
+
+.close {
+    position: absolute;
+    right: 2rem;
+    top: 1rem;
+    color: var(--txt-secondary-color);
+}
+
+.modal label {
+    cursor: pointer;
+}
+
+/* checks whether the checkbox inside the input with 'modal_close' class is checked */
+input.modal_close,
+body:has(.modal_close:checked) 
+.modal_container {
+    display: none;
 }

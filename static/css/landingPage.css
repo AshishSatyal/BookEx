@@ -115,7 +115,6 @@
   --width: 160px;
   width: var(--width);
   height: 55px;
-  overflow: hidden;
 }
 
 .buy_btn::before {
