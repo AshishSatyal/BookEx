@@ -1,88 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign up your account</title>
-    <link rel="stylesheet" href="/static/css/signup.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup form</title>
 
-  <body>
-    <div class="logo">
-      <img src="\css\logo.png" alt=" " />
-    </div>
-    <form class="signup">
-      <h2 class="text heading">Sign up</h2>
-      <label for="username">Username :</label> <br>
-      <div class="user_icon">
-        <i class="fa-solid fa-user"></i>
-      </div>
-      <input type="text" name="Name" id="username" placeholder="Type your username" /><br>
+    <link rel="stylesheet" href="/static/css/signup.css">
 
-      <label for="email">Email:</label> <br>
-      <div class="user_email">
-        <i class="fa-solid fa-envelope"></i>
-      </div>
-      <input type="text" name="Email" id="email" placeholder="Type your Email" /><br>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/a009a71f70.js" crossorigin="anonymous"></script>
+</head>
 
-      <label for="password">Password:</label> <br>
-      <div class="user_password">
-        <i class="fa-solid fa-lock"></i>
-      </div>
-      <input
-        type="password"
-        name="Password"
-        id="password"
-        placeholder="Enter your password"
-      /><br />
-
-      <label for="confirm_password">Confrim password:</label> <br />
-      <div class="re_password">
-        <i class="fa-solid fa-lock"></i>
-      </div>
-      <input
-        type="password"
-        name="re_password"
-        id="confirm_password"
-        placeholder="Re-enter your password"
-      /><br>
-      <button class="btn" type="submit">Signup</button>
-
-      <p class="or">OR</p>
-      <div class="social">
-        <a href="#"><i class="fa-brands fa-google"></i> </a>
-        <a href="#"><i class="fa-brands fa-facebook"></i> </a>
-        <a href="#"><i class="fa-brands fa-twitter"></i> </a>
-      </div>
-
-      <p class="already_user">Already a user? <a href="#">LOGIN</a></p>
-    </form>
-    <div class="modal_container active">
-      <div class="modal">
-        <div class="close">
-          <label for="close_modal">
-            <i class="far fa-times-circle"></i>
-          </label>
-          <input type="checkbox" name="close_modal" id="close_modal" class="modal_close">
+<body>
+    <div class="form_container">
+            <div class="sub_heading sign_up">
+                <h2>Sign up</h2>
+            </div>
+            <form action="">
+            <div class="username">
+                <div class="input first-name">
+                    <label for="fname">Firstname</label>
+                    
+                    <input type="text" id="fname" name="fname" placeholder="&#xf007; Your First name">
+                </div>
+                <div class="input last-name">
+                    <label for="lname">Lastname</label>
+                    <input type="text" id="lname" name="lname" placeholder="&#xf007; Your last name">
+                </div>
+            </div>
+            <div class="input Email">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="&#xf007; Enter your Email">
+            </div>
+            <div class="input password">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="&#xf007;Enter your password">
+            </div>
+            <div class="input re-password">
+                <label for="confirm">Confirm password</label>
+                <input type="password" id="confirm" name="confirm_password" placeholder="&#xf007;Re enter your password">
+            </div>
+                <button class="btn">Sign up</button>
+        </form>
+        <div class="social">
+                <p>OR</p>
+                <a href="#"><i class="fa-brands fa-google"></i> </a>
+                <a href="#"><i class="fa-brands fa-facebook"></i> </a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
         </div>
-        <i class="fas fa-check-circle"></i>
-        <p>Successful</p>
-      </div>
+        <p class="already_user">Already a user? <a href="#">LOGIN</a></p>
     </div>
-  </body>
+</body>
 </html>

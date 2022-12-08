@@ -97,18 +97,18 @@
   gap: 1.25rem;
 }
 
-.book_img_container {
+/* .book_img_container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   cursor: grab;
-}
+} */
 
-.book_img {
+/* .book_img {
   width: 100px;
   height: 160px;
   background-color: var(--txt-color-light);
   border: 1px solid var(--txt-secondary-color);
-}
+} */
 
 .buy_btn {
   position: relative;

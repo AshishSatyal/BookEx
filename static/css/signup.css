@@ -5,96 +5,87 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     background: url('/images/hovering_book.jpg') no-repeat fixed center; /* bg-img bg-repeat bg-attachment bg-position */
     background-size: cover; 
 }
 
-form.signup {
-    margin: 50px 0;
-    text-align: left;
-    background-color: rgba(242, 241, 240, 0.75);
+.form_container {
+    margin: 50px;
+    max-width: 500px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 40px;
+    border-radius: 10px;
+    background: hsla(32, 37%, 92%, 0.6);
     backdrop-filter: blur(5px);
-    border-radius: 16px;
-    padding: 25px;
-    /* min-width: 494;
-    min-height: 500; */
-    margin-top: 5px;
-    position: relative;
-    line-height: 1.25rem;
 }
 
-.logo {
-    margin-top: 20px;
-    margin-bottom: 5px;
-}
-
-.user_icon {
-    position: absolute;
-    top: calc(20%);
-}
-
-.user_email {
-    position: absolute;
-    top: calc(34%);
-}
-
-.user_password {
-    position: absolute;
-    top: calc(48%);
-}
-
-.re_password {
-    position: absolute;
-    top: calc(61%);
-
-}
-
-form h2 {
-    text-align: center;
-    margin: 10px 0 40px 0;
+form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    margin: 2rem 0;
 }
 
 label {
+    font-size: var(--fnt-size-norm);
     font-weight: var(--fnt-wght-semi-bold);
 }
 
 input {
-    display: block;
-    width: 350px;
-    height: 40px;
-    margin: 2px;
+    /* position: absolute; */
+    width: 100%;
     border: none;
     outline: none;
-    border-bottom: 1px solid black;
-    background: rgba(242, 241, 240, 0.75);
+    border-bottom: 1px solid var(--txt-secondary-color);
+    padding: 10px 5px;
+    margin-top: 5px;
     background: transparent;
-    padding-left: 20px;
 }
 
-.signup>button {
-    --width: 350px;
-    width: var(--width);
-    height: 40px;
-}
-
-.signup > button::before {
-    --width: 350px;
-    --height: 40px;
-}
-
-.or,
-.social,
-.already_user
-{
+.sign_up {
     text-align: center;
-    margin: 20px;
+    color: var(--txt-primary-color);
 }
 
-.social > a {
+.username {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
+}
+
+.btn {
+    --width: 390px;
+    width: var(--width);
+    height: 45px;
+    align-self: center;
+}
+
+.btn::before {
+    --width: 390px;
+    --height: 45px;
+}
+
+.social {
+    text-align: center;
+}
+
+.social>a {
     text-decoration: none;
+    font-size: 25px;
 }
 
+.already_user {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.already_user a {
+    color: var(--txt-primary-color);
+}
+
+/* css for modal */
 .modal_container {
     position: absolute;
     width: 100%;
@@ -146,4 +137,25 @@ input.modal_close,
 body:has(.modal_close:checked) 
 .modal_container {
     display: none;
+}
+
+@media screen and (max-width: 800px) {
+    .sign_up {
+        font-size: var(--fnt-size-medium);
+    }
+    .username {
+       flex-direction: column;
+    }
+    .btn {
+        --width: 200px;
+        height: 40px;
+    }
+    label {
+        font-size: var(--fnt-size-small);
+        font-weight: var(--fnt-wght-semi-bold);
+    }
+    .social, 
+    .already_user {
+       font-size: var(--fnt-size-small);
+    }
 }
