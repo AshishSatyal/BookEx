@@ -1,12 +1,22 @@
 @import url(style.css);
 
+.block {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
 .navbar {
-  background-color: var(--primary-color);
+  position: absolute;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 1.5rem;
-  position: sticky;
+  width: 100%;
+  height: 5rem;
+  border: 10x solid rgba(225, 225, 225, 0.18);
+  background: rgba(225, 225, 225, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(22, 22, 23, 0.37);
+  backdrop-filter: blur(5px);
 }
 .nav-links ul {
   display: flex;
@@ -21,10 +31,10 @@
   text-decoration: none;
   margin: 1rem;
   color: var(--txt-primary-color);
-  transition: ease 1s;
+  transition: ease 0.5s;
 }
 .nav-links li a:hover {
-  color: var(--secondary-color);
+  color: var(--accent-color);
 }
 .to-right {
   display: flex;
@@ -41,23 +51,42 @@
   padding-right: 2rem;
 }
 
-.btn-1 {
-  padding: 0.2rem;
-  border-radius: 15px;
-  background-color: var(--primary-color);
+.create_btn {
+  width: 160px;
+  color: var(--txt-primary-color);
+  height: 30px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.create_btn::before {
+  width: 160px;
+  height: 30px;
+}
+
+.image-1 {
+  background-size: contain;
+  width: 100vw;
+  height: 100vh;
+}
+/* hero section */
+
+.container {
+  width: 100%;
+}
+.quote {
+  position: absolute;
+  top: 9rem;
+  left: 5rem;
+  width: 25rem;
+}
+
+.quote-text {
   color: var(--txt-secondary-color);
-  border: 1px solid var(--accent-color);
-  transition: ease 1s;
+  font-size: var(--fnt-size-sub-heading);
   font-weight: var(--fnt-wght-semi-bold);
 }
-
-.btn-1:hover {
-  background-color: var(--secondary-color);
-  border: 1px solid var(--accent-color);
-  color: var(--txt-primary-color);
-  cursor: pointer;
-}
-
 
 /* best selling books section */
 .best_selling_books_sec {
@@ -68,25 +97,24 @@
   gap: 1.25rem;
 }
 
-.book_img_container {
+/* .book_img_container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   cursor: grab;
-}
+} */
 
-.book_img {
+/* .book_img {
   width: 100px;
   height: 160px;
   background-color: var(--txt-color-light);
   border: 1px solid var(--txt-secondary-color);
-}
+} */
 
 .buy_btn {
   position: relative;
   --width: 160px;
   width: var(--width);
   height: 55px;
-  overflow: hidden;
 }
 
 .buy_btn::before {

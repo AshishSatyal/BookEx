@@ -16,40 +16,84 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- hi-slider plugin -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="/static/javaScript/plugins/hislide/jquery.hislide.min.css">
+    <script type="text/javascript" src="/static/javaScript/plugins/hislide/jquery.hislide.js"></script>
+    
+    <script src="/static/javaScript/plugins/hislide/jquery.hislide.min.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
     <script src="/static/javaScript/landingPage.js" defer></script>
   </head>
   <body>
-    <!-- nav bar -->
-    <div class="navbar">
-      <div class="logo"><img src="" alt="BookEx" /></div>
-      <div class="nav-links">
-        <ul>
-          <li><a href="#">Author</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Categories</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-      <div class="to-right">
-        <ul>
-          <li><a href="#">Sign In</a></li>
-        </ul>
-        <div class="create-account-btn">
-          <button class="btn-1">Create Account</button>
-        </div>
-      </div>
-    </div>
     <main>
+      <div class="block">
+        <!-- nav bar -->
+        <div class="navbar">
+          <div class="logo"><img src="" alt="BookEx" /></div>
+          <div class="nav-links">
+            <ul>
+              <li><a href="#">Author</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Categories</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="to-right">
+            <ul>
+              <li><a href="#">Sign In</a></li>
+            </ul>
+            <div>
+              <button class="btn create_btn">Create account</button>
+            </div>
+          </div>
+        </div>
+        <div class="hero-img">
+          <img class="image-1" src="/images/book_in_forest.jpg" alt="image-1" />
+        </div>
+
+        <!-- --------Hero section------- -->
+
+        <section class="hero">
+          <div class="container">
+            <div class="quote">
+              <p class="quote-text">A place where you can buy knowledge.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
       <!-- contains every body of the landing page -->
       <section class="best_selling_books_sec">
         <p class="heading">Best selling books</p>
         <p class="sub_heading">Our products</p>
-        <div class="book_img_container">
-          <div class="book_img"></div>
-          <div class="book_img"></div>
-          <div class="book_img"></div>
-          <div class="book_img"></div>
-          <div class="book_img"></div>
+        <div class="book_img_container hi-slide">
+          <div class="hi-prev "></div>
+          <div class="hi-next "></div>
+          <ul class="hi-slide book_img_rotator">
+            <li class="hiSlider-item">
+              <img src="/images/book_img_1.png" alt="">
+            </li>
+            <li class="hiSlider-item">
+              <img src="/images/book_img_2.png" alt="">
+            </li>
+            <li class="hiSlider-item">
+              <img src="/images/book_img_3.png" alt="">
+            </li>
+            <li class="hiSlider-item">
+              <img src="/images/book_img_4.png" alt="">
+            <li class="hiSlider-item">
+                <img src="/images/book_img_5.png" alt="">
+            </li>
+            <li class="hiSlider-item">
+              <img src="/images/book_img_6.png" alt="">
+          </li>
+          <li class="hiSlider-item">
+            <img src="/images/book_img_7.png" alt="">
+          </li>
+        </ul>
         </div>
         <div>
           <button class="btn buy_btn">Buy</button>
@@ -58,8 +102,6 @@
     </main>
 
     <!-- footer section -->
-    <footer>
-
-    </footer>
+    <footer></footer>
   </body>
 </html>

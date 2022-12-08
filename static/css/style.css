@@ -11,12 +11,12 @@
 
 :root {
   /* colors */
-  --primary-color: #f2ebe3;
-  --secondary-color: #e1c7a2;
-  --accent-color: #daaa63; /*includes btn-color*/
-  --txt-primary-color: #2c1810;
-  --txt-secondary-color: #000000;
-  --txt-color-light: #aaa;
+  --primary-color: hsl(32, 37%, 92%);
+  --secondary-color: hsl(35, 51%, 76%);
+  --accent-color: hsl(36, 62%, 62%); /*includes btn-color*/
+  --txt-primary-color: hsl(17, 47%, 12%);
+  --txt-secondary-color: hsl(0, 0%, 0%);
+  --txt-color-light: hsl(0, 0%, 67%);
 
   /* font sizes */
   --fnt-size-title: 40px;
@@ -54,6 +54,7 @@
   border-radius: calc(var(--width) / 2);
   font-weight: var(--fnt-wght-semi-bold);
   transition: var(--transition);
+  overflow: hidden;
 }
 
 .btn::before {
