@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.models import User
-from bookexapp.models import UserProfileInfo
+from django.core.exceptions import ValidationError
 
 class UserForm(forms.ModelForm):
     username = forms.CharField(widget=forms.TextInput(attrs={'placeholder':'Enter your username'}))
@@ -12,5 +12,10 @@ class UserForm(forms.ModelForm):
     class Meta():
         model = User
         fields = ('username', 'email', 'password')
-    # if password != confirm_password:
-    #     raise forms.ValidationError("MAKE SURE YOUR PASSWORD MATCHES!")
+
+    def clean(self):
+        cleaned_data = super().clean()
+        password = cleaned_data["password"]
+        confirm_password = cleaned_data["confirm_password"]
+        if password != confirm_password:
+            raise ValidationError("MAKE SURE YOUR PASSWORD MATCHES!")
