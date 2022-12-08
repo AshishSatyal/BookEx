@@ -29,6 +29,7 @@
     </div>
     <form class="signup" method = 'post'>
       {% csrf_token %}
+      {{ user_form.non_field_errors }}<br>
       <h2 class="text heading">Sign up</h2>
       <label for="username">Username :</label> <br>
       <div class="user_icon">
