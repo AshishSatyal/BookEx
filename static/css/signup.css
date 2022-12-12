@@ -5,8 +5,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('/images/hovering_book.jpg') no-repeat fixed center; /* bg-img bg-repeat bg-attachment bg-position */
-    background-size: cover; 
+    background: url('/images/hovering_book.jpg') no-repeat fixed center;
+    /* bg-img bg-repeat bg-attachment bg-position */
+    background-size: cover;
 }
 
 .form_container {
@@ -93,8 +94,8 @@ input {
     background-color: hsla(32, 37%, 92%, 0.3);
     display: none;
     align-items: center;
-    justify-content: center;  
-    transform-origin: center; 
+    justify-content: center;
+    transform-origin: center;
     user-select: none;
 }
 
@@ -134,8 +135,7 @@ body:has(.active) .modal_container {
 
 /* checks whether the checkbox inside the input with 'modal_close' class is checked */
 input.modal_close,
-body:has(.modal_close:checked) 
-.modal_container {
+body:has(.modal_close:checked) .modal_container {
     display: none;
 }
 
@@ -143,19 +143,23 @@ body:has(.modal_close:checked)
     .sign_up {
         font-size: var(--fnt-size-medium);
     }
+
     .username {
-       flex-direction: column;
+        flex-direction: column;
     }
+
     .btn {
         --width: 200px;
         height: 40px;
     }
+
     label {
         font-size: var(--fnt-size-small);
         font-weight: var(--fnt-wght-semi-bold);
     }
-    .social, 
+
+    .social,
     .already_user {
-       font-size: var(--fnt-size-small);
+        font-size: var(--fnt-size-small);
     }
 }
