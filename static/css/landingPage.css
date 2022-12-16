@@ -90,25 +90,18 @@
 
 /* best selling books section */
 .best_selling_books_sec {
+  /* max-width: 1440px; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   gap: 1.25rem;
+  padding: var(--section-padding);
 }
 
-/* .book_img_container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  cursor: grab;
-} */
-
-/* .book_img {
-  width: 100px;
-  height: 160px;
-  background-color: var(--txt-color-light);
-  border: 1px solid var(--txt-secondary-color);
-} */
+.book_img_rotator {
+  width: 300px;
+}
 
 .buy_btn {
   position: relative;
@@ -120,4 +113,120 @@
 .buy_btn::before {
   --width: 160px;
   --height: 55px;
+}
+
+/* testimonial section css */
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  padding: var(--section-padding);
+  align-items: center;
+  justify-content: space-between;
+  row-gap: 5rem;
+  background: url(/images/book_raised.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.header {
+  text-align: center;
+}
+
+.review_cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 2rem;
+}
+
+.card {
+  position: relative;
+  max-width: 500px;
+  margin: 0 1rem;
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-areas: 
+  'ppImg infoTitle infoTitle infoTitle'
+  'review review review review';
+  background-color: hsla(32, 37%, 92%, 0.6);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  visibility: hidden;
+  transition: transform 300ms linear;
+}
+
+.card.slide_right {
+  transform: translateX(-100px);
+}
+
+.card.slide_left {
+  transform: translateX(100px);
+}
+
+.card.active {
+  visibility: visible;
+  transform: translateX(0px);
+}
+
+#card_2 {
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+
+#card_3 {
+  grid-row: 3/4;
+  grid-column: 1/2;
+}
+
+#card_4 {
+  grid-row: 4/5;
+  grid-column: 2/3;
+}
+
+div.img {
+  grid-area: ppImg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img img {
+  width: 60px;
+  height: 60px;
+  border: 1px solid var(--accent-color);
+  border-radius: 50%;
+}
+
+.person_info_title {
+  grid-area: infoTitle;
+  padding: 5px 1rem;
+  text-align: left;
+}
+
+.person_info_title > p.sub_heading {
+  color: var(--txt-primary-color);
+}
+
+.designation {
+  color: var(--txt-color-light);
+}
+
+.comnt_and_rev {
+  grid-area: review;
+  margin: 10px;
+  padding: 1.5rem 1rem;
+  color: var(--txt-secondary-color);
+}
+
+/* subscription section */
+
+/* responsive design */
+@media screen and (max-width: 800px) {
+  .review_cards {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+  #card_2,
+  #card_3,
+  #card_4 {
+    grid-column: auto;
+    grid-row: auto;
+  }
 }
