@@ -32,7 +32,11 @@
   --fnt-wght-bold: 700;
   --fnt-wght-thin: 200;
 
-  --transition: all 300ms ease-out; 
+  /* padding variables */
+  --section-padding: 2.5rem 2rem;
+
+  /* transition variables */
+  --transition: all 300ms ease-out;
 }
 
 .heading {

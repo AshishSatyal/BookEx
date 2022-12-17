@@ -50,6 +50,10 @@ input {
     color: var(--txt-primary-color);
 }
 
+.forgot_password {
+    text-align: center;
+}
+
 .username {
     display: flex;
     gap: 1.5rem;
@@ -77,12 +81,12 @@ input {
     font-size: 25px;
 }
 
-.already_user {
+.OR_SIGNUP {
     text-align: center;
     margin-top: 20px;
 }
 
-.already_user a {
+.OR_SIGNUP a {
     color: var(--txt-primary-color);
 }
 
@@ -159,7 +163,7 @@ body:has(.modal_close:checked) .modal_container {
     }
 
     .social,
-    .already_user {
+    .OR_SIGNUP {
         font-size: var(--fnt-size-small);
     }
 }
