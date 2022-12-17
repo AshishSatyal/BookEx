@@ -35,16 +35,27 @@
       {% csrf_token %}
       {{ user_form.non_field_errors }}<br>
       <div class="username">
+        <!--   
         <div class="input first-name">
-          <label for="fname">Firstname</label>
-                    
-          <input type="text" id="fname" name="fname" placeholder="&#xf007; Your First name">
+            <label for="fname">Firstname</label>
+
+            <input type="text" id="fname" name="fname" placeholder="&#xf007; Your First name">
         </div>
         <div class="input last-name">
-          <label for="lname">Lastname</label>
-          <input type="text" id="lname" name="lname" placeholder="&#xf007; Your last name">
+            <label for="lname">Lastname</label>
+            <i class="fa-solid fa-user"></i>
+            <input type="text" id="lname" name="lname" placeholder="&#xf007; Your last name">
         </div>
-      </div>
+
+        -->
+
+    </div>
+    <div class="input user-name">
+        <label for="lname">Username</label>
+        <i class="fa-solid fa-user"></i>
+        <input type="text" id="username" name="username" placeholder="&#xf007;username">
+    </div>
+    
       <div class="input Email">
         <label for="email">Email</label>
         {{ user_form.email }}<br>      
