@@ -1,0 +1,169 @@
+@import url(style.css);
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('/images/hovering_book.jpg') no-repeat fixed center;
+    /* bg-img bg-repeat bg-attachment bg-position */
+    background-size: cover;
+}
+
+.form_container {
+    margin: 50px;
+    max-width: 500px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 40px;
+    border-radius: 10px;
+    background: hsla(32, 37%, 92%, 0.6);
+    backdrop-filter: blur(5px);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    margin: 2rem 0;
+}
+
+label {
+    font-size: var(--fnt-size-norm);
+    font-weight: var(--fnt-wght-semi-bold);
+}
+
+input {
+    /* position: absolute; */
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--txt-secondary-color);
+    padding: 10px 5px;
+    margin-top: 5px;
+    background: transparent;
+}
+
+.sign_up {
+    text-align: center;
+    color: var(--txt-primary-color);
+}
+
+.forgot_password {
+    text-align: center;
+}
+
+.username {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
+}
+
+.btn {
+    --width: 390px;
+    width: var(--width);
+    height: 45px;
+    align-self: center;
+}
+
+.btn::before {
+    --width: 390px;
+    --height: 45px;
+}
+
+.social {
+    text-align: center;
+}
+
+.social>a {
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.OR_SIGNUP {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.OR_SIGNUP a {
+    color: var(--txt-primary-color);
+}
+
+/* css for modal */
+.modal_container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(32, 37%, 92%, 0.3);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transform-origin: center;
+    user-select: none;
+}
+
+body:has(.active),
+body:has(.active) .modal_container {
+    display: flex;
+    overflow: hidden;
+}
+
+.modal {
+    position: relative;
+    width: 60%;
+    height: 60%;
+    padding: 2rem .5rem;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--accent-color);
+    font-size: var(--fnt-size-sub-heading);
+    font-weight: var(--fnt-wght-semi-bold);
+    box-shadow: 0 0 5px var(--accent-color);
+}
+
+.close {
+    position: absolute;
+    right: 2rem;
+    top: 1rem;
+    color: var(--txt-secondary-color);
+}
+
+.modal label {
+    cursor: pointer;
+}
+
+/* checks whether the checkbox inside the input with 'modal_close' class is checked */
+input.modal_close,
+body:has(.modal_close:checked) .modal_container {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    .sign_up {
+        font-size: var(--fnt-size-medium);
+    }
+
+    .username {
+        flex-direction: column;
+    }
+
+    .btn {
+        --width: 200px;
+        height: 40px;
+    }
+
+    label {
+        font-size: var(--fnt-size-small);
+        font-weight: var(--fnt-wght-semi-bold);
+    }
+
+    .social,
+    .OR_SIGNUP {
+        font-size: var(--fnt-size-small);
+    }
+}
