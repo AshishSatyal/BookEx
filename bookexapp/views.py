@@ -1,5 +1,8 @@
 from django.shortcuts import render
 from bookexapp.forms import UserForm
+from django.contrib.auth import authenticate, login, logout
+from django.contrib import messages
+from django.http import HttpResponse
 # Create your views here.
 
 # basic views only to check if it works
@@ -27,6 +30,20 @@ def signup(request):
                              })
 
 def signin(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password= request.POST.get('password')
+
+        user = authenticate(username=username, password=password)
+
+        if user is not None:
+            login(request, user)
+            return HttpResponse('Logged in')
+        
+        else:
+            # messages.error(request,"Incorrect Credentials")
+            return HttpResponse('Incorrect Credentials')
+
     return render(request, 'bookexapp/login.html')
 
 def landingpage(request):
