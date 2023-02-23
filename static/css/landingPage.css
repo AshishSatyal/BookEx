@@ -189,7 +189,7 @@ body {
   align-items: center;
   justify-content: space-between;
   row-gap: 5rem;
-  background: url(/images/book_raised.jpg) no-repeat center;
+  background: url(/static/images/book_raised.jpg) no-repeat center;
   background-size: cover;
 }
 
