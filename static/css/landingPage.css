@@ -129,6 +129,17 @@ body {
   font-size: var(--fnt-size-heading);
   font-weight: var(--fnt-wght-thin);
 }
+.hero-text {
+  position: absolute;
+  top: 20rem;
+  left: 38rem;
+  width: 50rem;
+}
+.htext {
+  color: var(--txt-primary-color);
+  font-size: var(--fnt-size-medium);
+  font-weight: var(--fnt-wght-thin);
+}
 .search-box {
   position: absolute;
   top: 38rem;
