@@ -26,5 +26,8 @@ def signup(request):
                              'signed':signed,
                              })
 
+def signin(request):
+    return render(request, 'bookexapp/login.html')
+
 def landingpage(request):
     return render(request, 'bookexapp/landingPage.html')

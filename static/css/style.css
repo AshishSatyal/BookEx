@@ -16,7 +16,7 @@
   --accent-color: hsl(36, 62%, 62%); /*includes btn-color*/
   --txt-primary-color: hsl(17, 47%, 12%);
   --txt-secondary-color: hsl(0, 0%, 0%);
-  --txt-color-light: hsl(0, 0%, 67%);
+  --txt-color-light: hsl(0, 0%, 47%);
 
   /* font sizes */
   --fnt-size-title: 40px;
@@ -25,6 +25,7 @@
   --fnt-size-medium: 20px;
   --fnt-size-norm: 18px;
   --fnt-size-small: 16px;
+  --fnt-size-smaller: 14px;
   --fnt-size-btn-mb: 10px;
 
   /* font weight  wght---> weight */
@@ -47,6 +48,7 @@
 .sub_heading {
   font-size: var(--fnt-size-sub-heading);
   color: var(--txt-color-light);
+  font-weight: var(--fnt-wght-semi-bold);
 }
 
 /*NOTE: add btn class for each and every buttons */
@@ -54,7 +56,7 @@
   cursor: pointer;
   background: transparent;
   color: var(--accent-color);
-  border: 2px solid var(--accent-color);
+  border: 2px solid var(--border-color);
   border-radius: calc(var(--width) / 2);
   font-weight: var(--fnt-wght-semi-bold);
   transition: var(--transition);

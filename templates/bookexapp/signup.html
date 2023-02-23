@@ -2,95 +2,80 @@
 {% load static %}
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign up your account</title>
-    <link rel="stylesheet" href="{% static 'css/signup.css' %}" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://kit.fontawesome.com/a009a71f70.js" crossorigin="anonymous"></script>
-
-<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup form</title>
 
     <link rel="stylesheet" href="/static/css/signup.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <script src="https://kit.fontawesome.com/a009a71f70.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <div class="form_container">
-    <div class="sub_heading sign_up">
-      <h2>Sign up</h2>
-    </div>
-    <form class="signup" method = 'post'>
-      {% csrf_token %}
-      {{ user_form.non_field_errors }}<br>
-      <div class="username">
-        <!--   
-        <div class="input first-name">
-            <label for="fname">Firstname</label>
-
-            <input type="text" id="fname" name="fname" placeholder="&#xf007; Your First name">
+    <div class="form_container">
+        <div class="sub_heading sign_up">
+            <h2>Sign up</h2>
         </div>
-        <div class="input last-name">
-            <label for="lname">Lastname</label>
-            <i class="fa-solid fa-user"></i>
-            <input type="text" id="lname" name="lname" placeholder="&#xf007; Your last name">
+        <form action="/signup/" method="POST">
+          {% csrf_token %}
+            <div class="username">
+                <!--   
+                <div class="input first-name">
+                    <label for="fname">Firstname</label>
+
+                    <input type="text" id="fname" name="fname" placeholder="&#xf007; Your First name">
+                </div>
+                <div class="input last-name">
+                    <label for="lname">Lastname</label>
+                    <i class="fas fa-firefox"></i>
+                    <input type="text" id="lname" name="lname" placeholder="&#xf007; Your last name">
+                </div>
+                -->
+            </div>
+            <div class="input user-name">
+                <label for="lname">Username</label>
+                <i class="fa-solid fa-user"></i>
+                <input type="text" id="username" name="username" placeholder="&#xf007;username">
+            </div>
+
+            <div class="input email">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="&#xf007; Enter your Email">
+            </div>
+            <div class="input password">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="&#xf007; Enter your password">
+            </div>
+            <div class="input re-password">
+                <label for="confirm">Confirm password</label>
+                <input type="password" id="confirm" name="confirm_password"
+                    placeholder="&#xf007; Re enter your password">
+            </div>
+            <button class="btn">Sign up</button>
+        </form>
+        <div class="social">
+            <p>OR</p>
+            <a href="#"><i class="fa-brands fa-google"></i> </a>
+            <a href="#"><i class="fa-brands fa-facebook"></i> </a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
         </div>
-
-        -->
-
+        <p class="already_user">Already a user? <a href="#">LOGIN</a></p>
     </div>
-    <div class="input user-name">
-        <label for="lname">Username</label>
-        <i class="fa-solid fa-user"></i>
-        <input type="text" id="username" name="username" placeholder="&#xf007;username">
-    </div>
-    
-      <div class="input Email">
-        <label for="email">Email</label>
-        {{ user_form.email }}<br>      
-      </div>
-      <div class="input password">
-        <label for="password">Password</label>
-        {{ user_form.password }}<br>
-      </div>
-      <div class="input re-password">
-        <label for="confirm">Confirm password</label>
-        {{ user_form.confirm_password}}<br>
-      </div>
-      <button class="btn">Sign up</button>
-    </form>
-    
-    <div class="social">
-      <p>OR</p>
-      <a href="#"><i class="fa-brands fa-google"></i> </a>
-      <a href="#"><i class="fa-brands fa-facebook"></i> </a>
-     <a href="#"><i class="fa-brands fa-twitter"></i></a>
-    </div>
-    <p class="already_user">Already a user? <a href="#">LOGIN</a></p>
-  </div>
-
-  <div class="modal_container"> <!--NOTE: Add 'active' class to display modal-->
-      <div class="modal">
-        <div class="close">
-          <label for="close_modal">
-              <i class="far fa-times-circle"></i>
-          </label>
-          <input type="checkbox" name="close_modal" id="close_modal" class="modal_close">
+    <div class="modal_container"> <!--NOTE: Add 'active' class to display modal-->
+        <div class="modal">
+            <div class="close">
+                <label for="close_modal">
+                    <i class="far fa-times-circle"></i>
+                </label>
+                <input type="checkbox" name="close_modal" id="close_modal" class="modal_close">
+            </div>
+            <i class="fas fa-check-circle"></i>
+            <p>Successful</p>
         </div>
-        <i class="fas fa-check-circle"></i>
-        <p>Successful</p>
-      </div>
-  </div>
+    </div>
 </body>
 </html>

@@ -22,5 +22,6 @@ urlpatterns = [
     path('signup/',views.signup, name='signup'),
     path('admin/', admin.site.urls),
     path('bookexapp/', include('bookexapp.urls')),
+    path('signin/',views.signin, name='signin'),
     
 ]
