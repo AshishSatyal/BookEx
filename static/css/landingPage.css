@@ -186,6 +186,9 @@ body {
 .box {
   width: 25rem;
 }
+.buy-box {
+  border: 1px solid black;
+}
 
 /* best selling books section */
 .best_selling_books_sec {
