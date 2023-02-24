@@ -1,14 +1,14 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
+    <title>Signup form</title>
 
-    <link rel="stylesheet" href="/static/css/login.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    <link rel="stylesheet" href="/static/css/signup.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
         integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -18,9 +18,10 @@
 <body>
     <div class="form_container">
         <div class="sub_heading sign_up">
-            <h2>Login</h2>
+            <h2>Sign up</h2>
         </div>
-        <form action="">
+        <form action="/signup/" method="POST">
+          {% csrf_token %}
             <div class="username">
                 <!--   
                 <div class="input first-name">
@@ -30,12 +31,10 @@
                 </div>
                 <div class="input last-name">
                     <label for="lname">Lastname</label>
-                    <i class="fa-solid fa-user"></i>
+                    <i class="fas fa-firefox"></i>
                     <input type="text" id="lname" name="lname" placeholder="&#xf007; Your last name">
                 </div>
-
                 -->
-
             </div>
             <div class="input user-name">
                 <label for="lname">Username</label>
@@ -43,24 +42,28 @@
                 <input type="text" id="username" name="username" placeholder="&#xf007;username">
             </div>
 
+            <div class="input email">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="&#xf007; Enter your Email">
+            </div>
             <div class="input password">
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" placeholder="&#xf007; Enter your password">
             </div>
-
-            <div class="forget_password">
-                <p class="forgot_password"><a href="#">forgot password?</a></p>
+            <div class="input re-password">
+                <label for="confirm">Confirm password</label>
+                <input type="password" id="confirm" name="confirm_password"
+                    placeholder="&#xf007; Re enter your password">
             </div>
-
-            <button class="btn">LOGIN</button>
+            <button class="btn">Sign up</button>
         </form>
         <div class="social">
-            <p>OR sign up using</p>
+            <p>OR</p>
             <a href="#"><i class="fa-brands fa-google"></i> </a>
             <a href="#"><i class="fa-brands fa-facebook"></i> </a>
             <a href="#"><i class="fa-brands fa-twitter"></i></a>
         </div>
-        <p class="OR_SIGNUP"><a href="#">SIGN UP</a></p>
+        <p class="already_user">Already a user? <a href="/signin">LOGIN</a></p>
     </div>
     <div class="modal_container"> <!--NOTE: Add 'active' class to display modal-->
         <div class="modal">
@@ -75,5 +78,4 @@
         </div>
     </div>
 </body>
-
 </html>
