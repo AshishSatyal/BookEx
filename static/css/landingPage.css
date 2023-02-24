@@ -167,7 +167,6 @@ body {
 /* service section */
 
 .service-sec {
-  position: relative;
   padding-top: 3rem;
   text-align: center;
 }
@@ -184,12 +183,25 @@ body {
   padding: 3rem;
 }
 .box {
-  width: 25rem;
+  width: 20rem;
+  border-radius: 1rem;
+  margin: 1rem;
+  background-color: var(--accent-color);
+  opacity: 0.9;
+  height: 15rem;
+  box-shadow: 0 8px 32px 0 rgba(23, 23, 22, 0.3);
 }
-.buy-box {
-  border: 1px solid black;
+.exchange-box {
+  width: 23rem;
+  height: 18rem;
 }
-
+.box-head {
+  padding-top: 3rem;
+}
+.box-text {
+  padding-top: 2rem;
+  color: wheat;
+}
 /* best selling books section */
 .best_selling_books_sec {
   /* max-width: 1440px; */
