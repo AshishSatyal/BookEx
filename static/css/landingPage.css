@@ -164,6 +164,29 @@ body {
   color: var(--txt-primary-color);
 }
 
+/* service section */
+
+.service-sec {
+  position: relative;
+  padding-top: 3rem;
+  text-align: center;
+}
+.service-sub {
+  font-size: var(--fnt-size-sub-heading);
+  font-weight: var(--fnt-wght-thin);
+  margin-top: 3rem;
+}
+.service-box {
+  display: flex;
+  max-width: 1440px;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+.box {
+  width: 25rem;
+}
+
 /* best selling books section */
 .best_selling_books_sec {
   /* max-width: 1440px; */
