@@ -535,4 +535,16 @@ div.short_description ~ div > ul > li > a:hover::after {
     flex-direction: column;
     text-align: center;
   }
+
+  footer .links {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    padding: 96px 84px 12px 84px;   /* reduced each by 40% of desktop version... */
+    row-gap: 2rem;
+  }
+  .short_description {
+    grid-column: 1/-1;
+  } 
+  .copyright_sec {
+    padding: 1.25rem 0;
+  }
 }
