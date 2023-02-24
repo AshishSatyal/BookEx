@@ -3,6 +3,8 @@ from bookexapp.forms import UserForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.http import HttpResponse
+from django.core.mail import send_mail
+from django.conf import settings 
 # Create your views here.
 
 # basic views only to check if it works
@@ -18,6 +20,16 @@ def signup(request):
             user.save()
 
             signed = True
+
+            
+            send_mail(
+                'Welcome', # subject
+                'Welcome to our website', # message
+                settings.EMAIL_HOST_USER,
+                [user.email],
+                fail_silently=False,
+            )
+
 
         else:
             print(user_form.errors)
