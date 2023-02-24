@@ -4,7 +4,6 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.http import HttpResponse
 from django.core.mail import send_mail
-from django.conf import settings 
 # Create your views here.
 
 # basic views only to check if it works
@@ -25,7 +24,7 @@ def signup(request):
             send_mail(
                 'Welcome', # subject
                 'Welcome to our website', # message
-                settings.EMAIL_HOST_USER,
+                'disyou2134@gmail.com',
                 [user.email],
                 fail_silently=False,
             )
