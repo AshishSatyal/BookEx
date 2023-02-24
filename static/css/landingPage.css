@@ -109,7 +109,6 @@ body {
 }
 .hero-img {
   max-width: 100%;
-  background-size: cover;
 }
 .image-1 {
   width: 100%;
@@ -118,7 +117,7 @@ body {
 
 .quote {
   position: absolute;
-  top: 8rem;
+  top: 20rem;
   left: 25rem;
   width: 35rem;
   text-align: center;
@@ -142,7 +141,7 @@ body {
 }
 .search-box {
   position: absolute;
-  top: 38rem;
+  top: 30rem;
   left: 30rem;
 }
 .search {
