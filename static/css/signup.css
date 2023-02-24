@@ -5,7 +5,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('/images/hovering_book.jpg') no-repeat fixed center;
+    background: url('/static/images/hovering_book.jpg') no-repeat fixed center; 
     /* bg-img bg-repeat bg-attachment bg-position */
     background-size: cover;
 }
