@@ -32,7 +32,7 @@ def signup(request):
             # )
 
             subject = 'Welcome'
-            html_content = render_to_string('bookexapp/welcomemail.html',{'name':user.username})
+            html_content = render_to_string('bookexapp/welcomemail.html',{'name':user.username, 'email':user.email})
             from_email = 'disyou2134@gmail.com'
             to = user.email
             text_content = strip_tags(html_content)
