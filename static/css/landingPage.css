@@ -212,6 +212,10 @@ body {
     flex-direction: column;
     justify-content: center;
   }
+  .exchange-box {
+    width: 20rem;
+    height: 15rem;
+  }
 }
 /* best selling books section */
 .best_selling_books_sec {
