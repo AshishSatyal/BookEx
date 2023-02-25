@@ -56,6 +56,7 @@
                     placeholder="&#xf007; Re enter your password">
             </div>
             <button class="btn">Sign up</button>
+           
         </form>
         <div class="social">
             <p>OR</p>
@@ -65,17 +66,23 @@
         </div>
         <p class="already_user">Already a user? <a href="/signin">LOGIN</a></p>
     </div>
-    <div class="modal_container"> <!--NOTE: Add 'active' class to display modal-->
-        <div class="modal">
-            <div class="close">
-                <label for="close_modal">
-                    <i class="far fa-times-circle"></i>
-                </label>
-                <input type="checkbox" name="close_modal" id="close_modal" class="modal_close">
-            </div>
-            <i class="fas fa-check-circle"></i>
-            <p>Successful</p>
-        </div>
-    </div>
+    
+                <div class="modal_container {% if user_form.errors %}active{% endif %}"> <!--NOTE: Add 'active' class to display modal-->
+                    <div class="modal">
+                            <div class="close">
+                                <label for="close_modal">
+                                    <i class="far fa-times-circle"></i>
+                                </label>
+                                <input type="checkbox" name="close_modal" id="close_modal" class="modal_close">
+                            </div>
+                        <i class="fas fa-check-circle"></i>
+                        <p> 
+                            {% for field, error in user_form.errors.items %}
+                                
+                                {{ error | striptags }}<br>
+                            {% endfor %}
+                        </p>
+                    </div>
+                </div>             
 </body>
 </html>

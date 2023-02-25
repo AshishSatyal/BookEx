@@ -109,7 +109,7 @@ body:has(.active) .modal_container {
     position: relative;
     width: 60%;
     height: 60%;
-    padding: 2rem .5rem;
+    padding: 2rem;
     background-color: var(--primary-color);
     border-radius: 5px;
     display: flex;
@@ -120,6 +120,11 @@ body:has(.active) .modal_container {
     font-size: var(--fnt-size-sub-heading);
     font-weight: var(--fnt-wght-semi-bold);
     box-shadow: 0 0 5px var(--accent-color);
+}
+
+.modal p {
+    width: 100%;
+    word-wrap: break-word;
 }
 
 .close {

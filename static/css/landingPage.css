@@ -129,6 +129,17 @@ body {
   font-size: var(--fnt-size-heading);
   font-weight: var(--fnt-wght-thin);
 }
+.hero-text {
+  position: absolute;
+  top: 20rem;
+  left: 38rem;
+  width: 50rem;
+}
+.htext {
+  color: var(--txt-primary-color);
+  font-size: var(--fnt-size-medium);
+  font-weight: var(--fnt-wght-thin);
+}
 .search-box {
   position: absolute;
   top: 38rem;
@@ -153,6 +164,47 @@ body {
   color: var(--txt-primary-color);
 }
 
+/* service section */
+
+.service-sec {
+  padding-top: 3rem;
+  text-align: center;
+  margin-bottom: 5rem;
+  border-bottom: 1px solid var(--accent-color);
+  padding-bottom: 5rem;
+}
+.service-sub {
+  font-size: var(--fnt-size-sub-heading);
+  font-weight: var(--fnt-wght-thin);
+  margin-top: 3rem;
+}
+.service-box {
+  display: flex;
+  max-width: 1440px;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+.box {
+  width: 20rem;
+  border-radius: 1rem;
+  margin: 1rem;
+  background-color: var(--accent-color);
+  opacity: 0.9;
+  height: 15rem;
+  box-shadow: 0 8px 32px 0 rgba(23, 23, 22, 0.3);
+}
+.exchange-box {
+  width: 23rem;
+  height: 18rem;
+}
+.box-head {
+  padding-top: 3rem;
+}
+.box-text {
+  padding-top: 2rem;
+  color: wheat;
+}
 /* best selling books section */
 .best_selling_books_sec {
   /* max-width: 1440px; */
@@ -482,5 +534,17 @@ div.short_description ~ div > ul > li > a:hover::after {
   .subscription {
     flex-direction: column;
     text-align: center;
+  }
+
+  footer .links {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    padding: 96px 84px 12px 84px;   /* reduced each by 40% of desktop version... */
+    row-gap: 2rem;
+  }
+  .short_description {
+    grid-column: 1/-1;
+  } 
+  .copyright_sec {
+    padding: 1.25rem 0;
   }
 }
