@@ -204,6 +204,15 @@ body {
   padding-top: 2rem;
   color: wheat;
 }
+
+/* responsive design */
+@media screen and (max-width: 800px) {
+  .service-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 /* best selling books section */
 .best_selling_books_sec {
   /* max-width: 1440px; */
@@ -537,12 +546,12 @@ div.short_description ~ div > ul > li > a:hover::after {
 
   footer .links {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    padding: 96px 84px 12px 84px;   /* reduced each by 40% of desktop version... */
+    padding: 96px 84px 12px 84px; /* reduced each by 40% of desktop version... */
     row-gap: 2rem;
   }
   .short_description {
     grid-column: 1/-1;
-  } 
+  }
   .copyright_sec {
     padding: 1.25rem 0;
   }
