@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome {{user.username | default : 'Customer'}}</title>
+    <title>Welcome {{name|default:''}}</title>
     <style type="text/css" emogrify="no">
       #outlook a {
         padding: 0;
@@ -638,10 +638,7 @@
                                                   >
                                                     <div>
                                                       <p style="margin: 0">
-                                                        Dear {{
-                                                        user.username |
-                                                        default : "Valued
-                                                        Customer" }},
+                                                        Dear {{name|default:'Valued Customer'}},
                                                       </p>
                                                       <p style="margin: 0">
                                                         Welcome to BookEx! We
