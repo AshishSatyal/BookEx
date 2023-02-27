@@ -213,6 +213,7 @@ body {
   align-items: center;
   gap: 1.25rem;
   padding: var(--section-padding);
+  padding-bottom: 5rem;
   --border-color: var(--accent-color);
 }
 
@@ -307,7 +308,6 @@ a{
   width: var(--width);
   height: 55px;
   cursor: pointer;
-  margin-left: 10px;
 }
 
 .explore-btn::before {
@@ -562,6 +562,13 @@ div.short_description ~ div > ul > li > a:hover::after {
 
 /* responsive design */
 @media screen and (max-width: 1024px) {
+
+  .explore-btn {
+    --width: 200px;
+    width: var(--width);
+    height: 50px;
+  }
+
   .input_email form {
     display: flex;
     flex-direction: column;
