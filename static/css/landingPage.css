@@ -271,9 +271,10 @@ body {
 
 .book-card {
   max-width: 180px;
-  line-height: 1.75rem;
   margin: 0 20px;
   padding: 0 10px ;
+  display: flex;
+  flex-direction: column;
   transition: all 600ms ease-in-out;
 }
 
@@ -295,11 +296,22 @@ a{
   color: var(--txt-primary-color);
   font-size: var(--fnt-size-norm);
   font-weight: var(--fnt-wght-semi-bold);
+  line-height: 2.75rem;
+  cursor: pointer;
 }
 
-.author {
+.title {
+  --max-lines: 1; /*  no. of lines we want*/
+  display: -webkit-box; /* to use web-kit properties...*/
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--max-lines);
+  text-transform: capitalize;
+}
+
+/* NOTE: <i> cannot have margin-top and margin-bottom as it is inline tag */
+i.author {
   font-size: var(--fnt-size-smaller);
-  margin-top: 1rem;
   font-weight: var(--fnt-wght-thin); 
 }
 
