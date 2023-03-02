@@ -28,8 +28,15 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# For sending welcome emails
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp-relay.sendinblue.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'disyou2134@gmail.com'
+EMAIL_HOST_PASSWORD = 'vPzgb98HOFw5BGKr'
 
-
+DEFAULT_FROM_EMAIL = 'Verification@BookEx.com'
 # Application definition
 
 INSTALLED_APPS = [

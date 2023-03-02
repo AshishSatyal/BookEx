@@ -212,9 +212,10 @@
           <p>Subscribe to our newsletter and stay updated</p>
         </div>
         <div class="input_email">
-          <form action="">
-            <input type="email" placeholder="Your email" required />
-            <button class="btn sub_btn">Subscribe</button>
+          <form action="add_newsletter/" method="POST">
+            {% csrf_token %}
+            <input type="email" name="email" placeholder="Your email" required />
+            <button class="btn sub_btn" type="submit">Subscribe</button>
           </form>
         </div>
       </section>

@@ -2,11 +2,13 @@ from django.shortcuts import render
 from bookexapp.forms import UserForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.core.mail import EmailMultiAlternatives
 from django.utils.html import strip_tags
+from .models import NewsletterUsersList
+from django.shortcuts import redirect
 # Create your views here.
 
 # basic views only to check if it works
@@ -20,6 +22,8 @@ def signup(request):
             user = user_form.save()
             user.set_password(user.password) # hashing the password
             user.save()
+
+            
 
             signed = True
             
@@ -40,10 +44,14 @@ def signup(request):
                 subject,
                 text_content,
                 from_email,
-                [to],   
+                [to],  
             )
             email.attach_alternative(html_content,"text/html")
-            email.send()
+            email.send(fail_silently=True)
+            # email.send()
+            
+            return HttpResponseRedirect('/signup/')
+        
 
         else:
             print(user_form.errors)
@@ -54,6 +62,7 @@ def signup(request):
                             {'user_form':user_form,
                              'signed':signed,
                              })
+    
 
 def signin(request):
     if request.method == 'POST':
@@ -74,3 +83,11 @@ def signin(request):
 
 def landingpage(request):
     return render(request, 'bookexapp/landingPage.html')
+
+def add_newsletter(request):
+    if request.method == "POST":
+        email = request.POST['email']
+        new_customer = NewsletterUsersList(email = email)
+        new_customer.save()
+
+        return redirect('landingpage')
