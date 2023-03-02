@@ -1,4 +1,5 @@
 @import url(style.css);
+@import url(slider.css);
 
 body {
   background-color: var(--primary-color);
@@ -215,104 +216,6 @@ body {
   padding: var(--section-padding);
   padding-bottom: 5rem;
   --border-color: var(--accent-color);
-}
-
-.slider-btn {
-  display: flex;
-  align-self: flex-end;
-}
-
-.slider {
-  width: 100%;
-  margin: 20px;
-  padding: 20px 0;
-  display: flex;
-  overflow: hidden;
-  align-self: flex-start;  /* aligns the slider items only to flex-start as it is inside flex*/
-}
-
-.prev-btn,
-.next-btn {
-  height: 20px;
-  display: flex;
-  align-items: center;
-  border: none !important;
-  border-radius: 5px;
-  cursor: pointer;
-  padding: 20px;
-  font-size: var(--fnt-size-medium);
-  font-weight: var(--fnt-wght-bold);
-  color: var(--txt-color-light);
-  transition: color 300ms ease-in-out;
-}
-
-.prev-btn:hover,
-.next-btn:hover {
-  color: var(--txt-primary-color);
-}
-
-.prev-btn {
-  background: linear-gradient(-90deg, var(--primary-color) 0%, var(--secondary-color));
-}
-
-.next-btn {
-    background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color));
-}
-
-.book-container {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-}
-
-.book-container::-webkit-scrollbar {  /* to hide the scrollbar */
-  display: none;
-}
-
-.book-card {
-  max-width: 180px;
-  margin: 0 20px;
-  padding: 0 10px ;
-  display: flex;
-  flex-direction: column;
-  transition: all 600ms ease-in-out;
-}
-
-.book-card:hover 
-.book-img {
-  animation: swingdown 600ms ease-in-out; /* calling animation defined above... */
-}
-
-.book-img {
-  width: 160px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 5px;
-  text-align: center;
-}
-
-a{
-  text-decoration: none;
-  color: var(--txt-primary-color);
-  font-size: var(--fnt-size-norm);
-  font-weight: var(--fnt-wght-semi-bold);
-  line-height: 2.75rem;
-  cursor: pointer;
-}
-
-.title {
-  --max-lines: 1; /*  no. of lines we want*/
-  display: -webkit-box; /* to use web-kit properties...*/
-  overflow: hidden;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: var(--max-lines);
-  text-transform: capitalize;
-}
-
-/* NOTE: <i> cannot have margin-top and margin-bottom as it is inline tag */
-i.author {
-  font-size: var(--fnt-size-smaller);
-  font-weight: var(--fnt-wght-thin); 
 }
 
 .explore-btn {

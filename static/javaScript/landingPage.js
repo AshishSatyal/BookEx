@@ -74,8 +74,6 @@ const bookContainer = [...document.querySelectorAll('.book-container')];    // s
 const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
 
-console.log(bookContainer);
-
 // console.log(prevBtn);
 bookContainer.forEach((book, i) => {
     let containerDimension = book.getBoundingClientRect();
