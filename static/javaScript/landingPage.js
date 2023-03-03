@@ -1,19 +1,19 @@
-'use strict';
+const bookContainer = [...document.querySelectorAll('.book-container')];    // spreading selected div.book-caontainer...
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
 
-$('.book_img_rotator').hiSlide(); //best selling books animation
+console.log(bookContainer);
 
-window.addEventListener('scroll', reveal);
-
-function reveal() {
-    const revealCard = document.querySelectorAll('.card');
-
-    revealCard.forEach(card => {
-        let windowheight = window.innerHeight;
-        let revealtop = card.getBoundingClientRect().top; //cards top value on the window
-        const revealPoint = 150;
-
-        if(revealtop < windowheight - revealPoint) {
-            card.classList.add('active');
-        }
+// console.log(prevBtn);
+bookContainer.forEach((book, i) => {
+    let containerDimension = book.getBoundingClientRect();
+    let containerWidth = containerDimension.width;
+    
+    prevBtn.addEventListener('click', () => {
+        book.scrollLeft -= containerWidth;
     })
-}
+    
+    nextBtn.addEventListener('click', () => {
+        book.scrollLeft += containerWidth;
+    })
+})

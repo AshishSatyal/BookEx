@@ -217,36 +217,126 @@ body {
     height: 15rem;
   }
 }
+
 /* best selling books section */
 .best_selling_books_sec {
-  /* max-width: 1440px; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   gap: 1.25rem;
   padding: var(--section-padding);
+  padding-bottom: 5rem;
   --border-color: var(--accent-color);
 }
 
-.book_img_rotator {
-  width: 300px;
+.slider-btn {
+  display: flex;
+  align-self: flex-end;
 }
 
-.buy_btn {
-  position: relative;
-  --width: 160px;
+.slider {
+  width: 100%;
+  margin: 20px;
+  padding: 20px 0;
+  display: flex;
+  overflow: hidden;
+  align-self: flex-start; /* aligns the slider items only to flex-start as it is inside flex*/
+}
+
+.prev-btn,
+.next-btn {
+  height: 20px;
+  display: flex;
+  align-items: center;
+  border: none !important;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 20px;
+  font-size: var(--fnt-size-medium);
+  font-weight: var(--fnt-wght-bold);
+  color: var(--txt-color-light);
+  transition: color 300ms ease-in-out;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  color: var(--txt-primary-color);
+}
+
+.prev-btn {
+  background: linear-gradient(
+    -90deg,
+    var(--primary-color) 0%,
+    var(--secondary-color)
+  );
+}
+
+.next-btn {
+  background: linear-gradient(
+    90deg,
+    var(--primary-color) 0%,
+    var(--secondary-color)
+  );
+}
+
+.book-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.book-container::-webkit-scrollbar {
+  /* to hide the scrollbar */
+  display: none;
+}
+
+.book-card {
+  max-width: 180px;
+  line-height: 1.75rem;
+  margin: 0 20px;
+  padding: 0 10px;
+  transition: all 600ms ease-in-out;
+}
+
+.book-card:hover .book-img {
+  animation: swingdown 600ms ease-in-out; /* calling animation defined above... */
+}
+
+.book-img {
+  width: 160px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--txt-primary-color);
+  font-size: var(--fnt-size-norm);
+  font-weight: var(--fnt-wght-semi-bold);
+}
+
+.author {
+  font-size: var(--fnt-size-smaller);
+  margin-top: 1rem;
+  font-weight: var(--fnt-wght-thin);
+}
+
+.explore-btn {
+  --width: 240px;
   width: var(--width);
   height: 55px;
+  cursor: pointer;
 }
 
-.buy_btn::before {
-  --width: 160px;
+.explore-btn::before {
+  --width: 100%;
   --height: 55px;
 }
 
 /* testimonial section css */
-.testimonials {
+/* .testimonials {
   display: flex;
   flex-direction: column;
   padding: var(--section-padding);
@@ -344,7 +434,7 @@ body {
   margin: 10px;
   padding: 1.5rem 1rem;
   color: var(--txt-secondary-color);
-}
+} */
 
 /* subscription section */
 .subscription {
@@ -472,21 +562,19 @@ div.short_description ~ div > ul > li > a:hover::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: 1rem;
+  column-gap: 1.25rem;
 }
 
-.social_media > ul > li > a {
+.social-media-icon:hover::after {
   content: none;
-  width: 30px;
-  height: 30px;
 }
 
-.social_media > ul > li > a:hover::after {
-  content: none;
+.social-media-icon i {
+  font-size: var(--fnt-size-medium);
 }
 
 .copyright_sec {
-  padding: 1.75rem 0;
+  padding: 2rem 0;
   text-align: center;
   color: var(--primary-color);
   background-color: var(--txt-secondary-color);
@@ -494,6 +582,12 @@ div.short_description ~ div > ul > li > a:hover::after {
 
 /* responsive design */
 @media screen and (max-width: 1024px) {
+  .explore-btn {
+    --width: 200px;
+    width: var(--width);
+    height: 50px;
+  }
+
   .input_email form {
     display: flex;
     flex-direction: column;
@@ -520,6 +614,7 @@ div.short_description ~ div > ul > li > a:hover::after {
 }
 
 @media screen and (max-width: 800px) {
+  /* testimonial responsive section...
   .review_cards {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   }
@@ -541,7 +636,7 @@ div.short_description ~ div > ul > li > a:hover::after {
   #card_4 {
     grid-column: auto;
     grid-row: auto;
-  }
+  } */
 
   .subscription {
     flex-direction: column;

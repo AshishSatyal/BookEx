@@ -6,13 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BookEx</title>
     <link rel="stylesheet" href="/static/css/landingPage.css" />
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    /> -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
@@ -72,7 +65,7 @@
           </div>
           <div class="to-right">
             <ul>
-              <li><a href="#">Sign In</a></li>
+              <li><a href="../../templates/bookexapp/login.html">Sign In</a></li>
             </ul>
             <div>
               <button class="btn create_btn">Create account</button>
@@ -128,39 +121,73 @@
       <section class="best_selling_books_sec">
         <p class="heading">Best selling books</p>
         <p class="sub_heading">Our products</p>
-        <div class="book_img_container hi-slide">
-          <div class="hi-prev"></div>
-          <div class="hi-next"></div>
-          <ul class="hi-slide book_img_rotator">
-            <li class="hiSlider-item">
-              <img src="/static/images/book_img_1.png" alt="" />
-            </li>
-            <li class="hiSlider-item">
-              <img src="/static/images/book_img_2.png" alt="" />
-            </li>
-            <li class="hiSlider-item">
-              <img src="/static/images/book_img_3.png" alt="" />
-            </li>
-            <li class="hiSlider-item">
-              <img src="/static/images/book_img_4.png" alt="" />
-            </li>
-
-            <li class="hiSlider-item">
-              <img src="/static/images/book_img_5.png" alt="" />
-            </li>
-            <li class="hiSlider-item">
-              <img src="/static/images/book_img_6.png" alt="" />
-            </li>
-            <li class="hiSlider-item">
-              <img src="/static/images/book_img_7.png" alt="" />
-            </li>
-          </ul>
+        <div class="slider-btn">
+          <button class="prev-btn">
+              <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="next-btn">
+              <i class="fas fa-chevron-right"></i>
+          </button>
         </div>
-        <div>
-          <button class="btn buy_btn">Buy</button>
+        <div class="slider">
+            <div class="book-container">
+              <!-- NOTE: every book images, title and author name are hardcoded for now... -->
+                <div class="book-card">
+                    <a href="">
+                        <img src="../../static/images/book_img_1.png" alt="" class="book-img">
+                        <p class="title">The hound of Baskerville</p>
+                    </a>
+                    <p class="author"><i>- Arthur Conan Doyle</i></p>
+                </div>
+                <div class="book-card">
+                  <a href="">
+                      <img src="../../static/images/book_img_3.png" alt="" class="book-img">
+                      <p class="title">The hound of Baskerville</p>
+                  </a>
+                  <p class="author"><i>- Arthur Conan Doyle</i></p>
+              </div>
+              <div class="book-card">
+                <a href="">
+                    <img src="../../static/images/book_img_2.png" alt="" class="book-img">
+                    <p class="title">The hound of Baskerville</p>
+                </a>
+                <p class="author"><i>- Arthur Conan Doyle</i></p>
+            </div>
+            <div class="book-card">
+              <a href="">
+                  <img src="../../static/images/book_img_4.png" alt="" class="book-img">
+                  <p class="title">The hound of Baskerville</p>
+              </a>
+              <p class="author"><i>- Arthur Conan Doyle</i></p>
+          </div>
+          <div class="book-card">
+            <a href="">
+                <img src="../../static/images/book_img_5.png" alt="" class="book-img">
+                <p class="title">The hound of Baskerville</p>
+            </a>
+            <p class="author"><i>- Arthur Conan Doyle</i></p>
         </div>
+        <div class="book-card">
+          <a href="">
+              <img src="../../static/images/book_img_6.png" alt="" class="book-img">
+              <p class="title">The hound of Baskerville</p>
+          </a>
+          <p class="author"><i>- Arthur Conan Doyle</i></p>
+      </div>
+      <div class="book-card">
+        <a href="">
+            <img src="../../static/images/book_img_7.png" alt="" class="book-img">
+            <p class="title">The hound of Baskerville</p>
+        </a>
+        <p class="author"><i>- Arthur Conan Doyle</i></p>
+    </div>
+            </div>
+        </div>
+        <a href=""> <!-- links to page with different lists of books displayed in carousels -->
+          <button class="btn explore-btn">Explore books</button>
+        </a>
       </section>
-      <section class="testimonials">
+      <!-- <section class="testimonials">
         <div class="header">
           <p class="heading">Our testimonials</p>
           <p class="sub_heading">What our clients say about us</p>
@@ -227,7 +254,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <section class="subscription">
         <div>
           <p class="heading">Subscribe to our newsletter!</p>
@@ -286,22 +313,22 @@
         <div class="social_media">
           <ul>
             <li>
-              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="social-media-icon"><i class="fab fa-github"></i></a>
             </li>
             <li>
-              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="social-media-icon"><i class="fab fa-facebook"></i></a>
             </li>
             <li>
-              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="social-media-icon"><i class="fab fa-linkedin"></i></a>
             </li>
             <li>
-              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="social-media-icon"><i class="fab fa-instagram"></i></a>
             </li>
             <li>
-              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="social-media-icon"><i class="fab fa-dribbble"></i></a>
             </li>
             <li>
-              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="social-media-icon"><i class="fab fa-tiktok"></i></a>
             </li>
           </ul>
         </div>
