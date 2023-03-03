@@ -1,115 +1,11 @@
 @import url(style.css);
 @import url(slider.css);
+@import url(navbar.css);
 
 body {
   background-color: var(--primary-color);
 }
 
-.navbar {
-  position: absolute;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 5rem;
-  border: 10x solid rgba(225, 225, 225, 0.18);
-  background: rgba(225, 225, 225, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(22, 22, 23, 0.37);
-  backdrop-filter: blur(5px);
-}
-
-.nav-links ul {
-  display: flex;
-  list-style: none;
-}
-.nav-links ul li {
-  position: relative;
-  transition: all 0.25s ease-in-out;
-}
-.logo {
-  margin: 1rem;
-}
-
-.nav-links li a {
-  text-decoration: none;
-  margin: 1rem;
-  color: var(--txt-primary-color);
-  font-weight: var(--fnt-wght-thin);
-  transition: ease 0.5s;
-}
-.nav-links li a:hover {
-  color: var(--accent-color);
-}
-.to-right {
-  display: flex;
-  margin: 1rem;
-}
-.to-right ul {
-  list-style: none;
-  padding-top: 0.7rem;
-}
-.to-right li a {
-  text-decoration: none;
-  margin: 1rem;
-  color: var(--txt-secondary-color);
-  padding-right: 2rem;
-}
-
-.create_btn {
-  width: 160px;
-  color: var(--txt-primary-color);
-  height: 3rem;
-  position: relative;
-  overflow: hidden;
-  border-radius: 1rem;
-  --border-color: var(--accent-color);
-}
-
-.create_btn::before {
-  width: 160px;
-  height: 3rem;
-}
-.nav-links ul li:hover .drop-down {
-  position: absolute;
-  display: block;
-  padding: 0px -2px;
-  top: 100%;
-  left: -5%;
-  background: rgba(225, 225, 225, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(22, 22, 23, 0.37);
-  backdrop-filter: blur(5px);
-  width: 10rem;
-  border-radius: 15px;
-  animation-name: swingdown;
-  animation-duration: 0.5s;
-  animation-timing-function: ease;
-}
-
-@keyframes swingdown {
-  0% {
-    transform: rotateX(90deg);
-  }
-  30% {
-    transform: rotateX(-20deg) rotateY(5deg);
-    animation-timing-function: ease-in-out;
-  }
-  65% {
-    transform: rotateX(-20deg) rotateY(-3deg);
-    animation-timing-function: ease-in-out;
-  }
-}
-.drop-down {
-  display: none;
-}
-.drop-down ul {
-  display: block;
-  margin: 1rem;
-}
-.drop-down ul li {
-  width: 10rem;
-  padding: 5px;
-  justify-content: left;
-}
 .hero-img {
   max-width: 100%;
 }
