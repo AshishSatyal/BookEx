@@ -7,6 +7,8 @@ from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.core.mail import EmailMultiAlternatives
 from django.utils.html import strip_tags
+# from django.http import HttpResponse, HttpResponseRedirect
+
 # Create your views here.
 
 # basic views only to check if it works
@@ -44,6 +46,8 @@ def signup(request):
             )
             email.attach_alternative(html_content,"text/html")
             email.send()
+
+            # return HttpResponseRedirect('/signup/')
 
         else:
             print(user_form.errors)
