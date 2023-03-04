@@ -20,6 +20,7 @@ body {
   --txt-primary-color: hsl(17, 47%, 12%);
   --txt-secondary-color: hsl(0, 0%, 0%);
   --txt-color-light: hsl(0, 0%, 47%);
+  --txt-err-color: hsl(0, 79%, 72%);
 
   /* font sizes */
   --fnt-size-title: 40px;
@@ -29,6 +30,7 @@ body {
   --fnt-size-norm: 18px;
   --fnt-size-small: 16px;
   --fnt-size-smaller: 14px;
+  --fnt-size-smallest: 12px;
   --fnt-size-btn-mb: 10px;
 
   /* font weight  wght---> weight */

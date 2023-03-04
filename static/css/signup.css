@@ -25,8 +25,16 @@ body {
 form {
     display: flex;
     flex-direction: column;
-    row-gap: 1rem;
+    row-gap: 1.5rem;
     margin: 2rem 0;
+}
+
+
+.input {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
 }
 
 label {
@@ -35,7 +43,6 @@ label {
 }
 
 input {
-    /* position: absolute; */
     width: 100%;
     border: none;
     outline: none;
@@ -43,6 +50,26 @@ input {
     padding: 10px 5px;
     margin-top: 5px;
     background: transparent;
+    caret-color: var(--txt-color-light);
+}
+input::placeholder {
+    padding: 0 2px;
+}
+input.error + .msg {    /* '+' represents adjacent sibling of input element with '.error' class */
+    display: block;
+}
+
+input.error{
+    caret-color: var(--txt-err-color); /* note caret-color props set the color of the caret... (|) */
+    border-bottom: 1px solid var(--txt-err-color);
+}
+input.error::placeholder {
+    color: var(--txt-err-color);
+}
+.msg {
+    display: none;
+    color: var(--txt-err-color);
+    font-size: var(--fnt-size-smallest);
 }
 
 .sign_up {
@@ -50,21 +77,16 @@ input {
     color: var(--txt-primary-color);
 }
 
-.username {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: space-between;
-}
-
-.btn {
+.sign-up-btn {
     --width: 390px;
     width: var(--width);
     height: 45px;
     align-self: center;
+    --border-color: var(--accent-color);
 }
-
-.btn::before {
-    --width: 390px;
+  
+.sign-up-btn::before {
+    --width: 390px;  /* passing width variable to '.btn' class in signup.css */
     --height: 45px;
 }
 
@@ -74,7 +96,9 @@ input {
 
 .social>a {
     text-decoration: none;
-    font-size: 25px;
+    font-size: var(--fnt-size-medium);
+    color: var(--txt-secondary-color);
+    padding: 5px;
 }
 
 .already_user {
@@ -147,10 +171,6 @@ body:has(.modal_close:checked) .modal_container {
 @media screen and (max-width: 800px) {
     .sign_up {
         font-size: var(--fnt-size-medium);
-    }
-
-    .username {
-        flex-direction: column;
     }
 
     .btn {
