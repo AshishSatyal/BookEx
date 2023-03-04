@@ -30,28 +30,28 @@
             <div class="input user-name">
                 <label for="lname">Username</label>
                 <input type="text" id="username" 
-                class = "error"
+                class = "{% if user_form.errors.username %} error {% endif %}"
                 name="username" placeholder="&#xf007;  Username ">
-                <span class="msg">Valid username</span>
+                <span class="msg">{{ user_form.username.errors | striptags }}</span>
             </div>
             <div class="input email">
                 <label for="email">Email</label>
-                <input type="text" id="email" name="email" class = "error" placeholder="&#xf0e0;  Enter your Email">
-                <span class="msg">Invalid email</span>
+                <input type="text" id="email" name="email" class = "{% if user_form.errors %}error{% endif %}" placeholder="&#xf0e0;  Enter your Email">
+                <!-- <span class="msg">{% if user_form.errors %}{{ user_form.errors.email | striptags }}{% endif %}</span> -->
+                <span class="msg">{{ user_form.email.errors | striptags }}</span>
             </div>
             <div class="input password">
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" 
-                class = ""
+                class = "{% if user_form.errors %}error{% endif %}"
                 placeholder="&#xf023;  Enter your password">
-                <span class="msg">Password doesn't match</span>
             </div>
             <div class="input re-password">
                 <label for="confirm">Confirm password</label>
                 <input type="password" id="confirm" name="confirm_password"
-                class = ""
+                class = "{% if user_form.errors %}error{% endif %}"
                 placeholder="&#xf023;  Re-enter your password">
-                <span class="msg">Password doesn't match</span>
+                <span class="msg">{{ user_form.confirm_password.errors | striptags }}</span>
             </div>
             <button class="btn sign-up-btn">Sign up</button>
         </form>
@@ -64,22 +64,6 @@
         <p class="already_user">Already a user? <a href="/signin">LOGIN</a></p>
     </div>
     
-                <div class="modal_container {% if user_form.errors %}active{% endif %}"> <!--NOTE: Add 'active' class to display modal-->
-                    <div class="modal">
-                            <div class="close">
-                                <label for="close_modal">
-                                    <i class="far fa-times-circle"></i>
-                                </label>
-                                <input type="checkbox" name="close_modal" id="close_modal" class="modal_close">
-                            </div>
-                        <i class="fas fa-check-circle"></i>
-                        <p> 
-                            {% for field, error in user_form.errors.items %}
-                                
-                                {{ error | striptags }}<br>
-                            {% endfor %}
-                        </p>
-                    </div>
-                </div>             
+              
 </body>
 </html>

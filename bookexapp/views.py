@@ -7,7 +7,6 @@ from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.core.mail import EmailMultiAlternatives
 from django.utils.html import strip_tags
-# from django.http import HttpResponse, HttpResponseRedirect
 
 from .models import NewsletterUsersList
 from django.shortcuts import redirect
@@ -53,11 +52,9 @@ def signup(request):
             # email.send()
             
             return HttpResponseRedirect('/signup/')
-        
 
-
-        else:
-            print(user_form.errors)
+        # else:
+        #     print(user_form.errors)
 
     else:
         user_form = UserForm()
