@@ -1,0 +1,98 @@
+/* footer section */
+footer .links {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 160px 140px 20px 140px;
+    justify-content: center;
+    column-gap: 2rem;
+  }
+  
+  .short_description {
+    grid-column: 1/3;
+    padding-right: 2.5rem;
+  }
+  
+  .short_description p {
+    margin-top: 1rem;
+    color: var(--txt-color-light);
+    font-size: var(--fnt-size-smaller);
+  }
+  
+  div.short_description ~ div > .sub_heading {
+    color: var(--txt-primary-color);
+  }
+  
+  div.short_description ~ div > ul {
+    padding: 1rem 0;
+    line-height: 2.25rem;
+  }
+  
+  div.short_description ~ div > ul > li {
+    list-style-type: none;
+  }
+  
+  div.short_description ~ div > ul > li > a {
+    position: relative;
+    text-decoration: none;
+    color: var(--txt-secondary-color);
+    font-size: var(--fnt-size-smaller);
+    font-weight: var(--fnt-wght-semi-bold);
+  }
+  
+  div.short_description ~ div > ul > li > a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--txt-secondary-color);
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform 200ms ease-out;
+  }
+  
+  div.short_description ~ div > ul > li > a:hover::after {
+    transform: scaleX(1);
+  }
+  
+  .social_media {
+    grid-column: 1/-1;
+    padding: 2.5rem 0;
+  }
+  
+  .social_media ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1.25rem;
+  }
+  
+  .social-media-icon:hover::after {
+    content: none;
+  }
+  
+  .social-media-icon i{
+    font-size: var(--fnt-size-medium);
+  }
+  
+  .copyright_sec {
+    padding: 2rem 0;
+    text-align: center;
+    color: var(--primary-color);
+    background-color: var(--txt-secondary-color);
+  }
+
+@media screen and (max-width: 800px) {
+    footer .links {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        padding: 96px 84px 12px 84px;   /* reduced each by 40% of desktop version... */
+        row-gap: 2rem;
+    }
+    .short_description {
+        grid-column: 1/-1;
+    } 
+    .copyright_sec {
+        padding: 1.25rem 0;
+    }
+}
