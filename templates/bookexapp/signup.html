@@ -27,31 +27,38 @@
         </div>
         <form action="/signup/" method="POST">
           {% csrf_token %}
-            <div class="username">
-            </div>
             <div class="input user-name">
                 <label for="lname">Username</label>
-                <input type="text" id="username" name="username" placeholder="&#xf007;  Username ">
+                <input type="text" id="username" 
+                class = "error"
+                name="username" placeholder="&#xf007;  Username ">
+                <span class="msg">Valid username</span>
             </div>
             <div class="input email">
                 <label for="email">Email</label>
-                <input type="text" id="email" name="email" placeholder="&#xf0e0;  Enter your Email">
+                <input type="text" id="email" name="email" class = "error" placeholder="&#xf0e0;  Enter your Email">
+                <span class="msg">Invalid email</span>
             </div>
             <div class="input password">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="&#xf023;  Enter your password">
+                <input type="password" id="password" name="password" 
+                class = ""
+                placeholder="&#xf023;  Enter your password">
+                <span class="msg">Password doesn't match</span>
             </div>
             <div class="input re-password">
                 <label for="confirm">Confirm password</label>
                 <input type="password" id="confirm" name="confirm_password"
-                    placeholder="&#xf023;  Re-enter your password">
+                class = ""
+                placeholder="&#xf023;  Re-enter your password">
+                <span class="msg">Password doesn't match</span>
             </div>
             <button class="btn sign-up-btn">Sign up</button>
         </form>
         <div class="social">
             <p>OR</p>
-            <a href="#"><i class="fa-brands fa-google"></i> </a>
-            <a href="#"><i class="fa-brands fa-facebook"></i> </a>
+            <a href="#"><i class="fa-brands fa-google"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
             <a href="#"><i class="fa-brands fa-twitter"></i></a>
         </div>
         <p class="already_user">Already a user? <a href="/signin">LOGIN</a></p>
