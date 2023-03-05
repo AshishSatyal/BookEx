@@ -48,14 +48,14 @@ bookDetails.map(book => {
     bookCard.className = "book-card";
     const bookLink = document.createElement("a");
     bookLink.id = "book-link";
-    bookLink.title = book.title;
+    bookLink.title = book.title.toUpperCase();
  
     const bookImg = document.createElement('img');
     bookImg.className = "book-img";
     bookImg.src = `../../static/images/${book.img}`;
 
     const title = document.createElement('p');
-    title.className = "title";
+    title.className = "book-title";
     title.textContent = book.title;
 
     const author = document.createElement('i');
@@ -69,21 +69,25 @@ bookDetails.map(book => {
     return document.querySelector('.book-container').appendChild(bookCard);
 })
 
-const bookContainer = [...document.querySelectorAll('.book-container')];    // spreading selected div.book-caontainer...
-
-const prevBtn = document.querySelector('.prev-btn');
-const nextBtn = document.querySelector('.next-btn');
-
-// console.log(prevBtn);
-bookContainer.forEach((book, i) => {
-    let containerDimension = book.getBoundingClientRect();
-    let containerWidth = containerDimension.width;
+export function sliderControl() {
+    const bookContainer = [...document.querySelectorAll('.book-container')];    // spreading selected div.book-caontainer...
     
-    prevBtn.addEventListener('click', () => {
-        book.scrollLeft -= containerWidth;
-    })
+    const prevBtn = [...document.querySelectorAll('.prev-btn')];
+    const nextBtn = [...document.querySelectorAll('.next-btn')];
     
-    nextBtn.addEventListener('click', () => {
-        book.scrollLeft += containerWidth;
+    // console.log(prevBtn);
+    bookContainer.forEach((book, i) => {
+        let containerDimension = book.getBoundingClientRect();
+        let containerWidth = containerDimension.width;
+        
+        prevBtn[i].addEventListener('click', () => {
+            book.scrollLeft -= containerWidth;
+        })
+        
+        nextBtn[i].addEventListener('click', () => {
+            book.scrollLeft += containerWidth;
+        })
     })
-})
+}
+
+sliderControl();
