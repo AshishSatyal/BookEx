@@ -19,8 +19,8 @@ class UserForm(forms.ModelForm):
         password = cleaned_data.get("password")
         confirm_password = cleaned_data.get("confirm_password")
         if password != confirm_password:
-            raise ValidationError("MAKE SURE YOUR PASSWORD MATCHES!")
-        
+            raise ValidationError({"confirm_password":"Password doesn't match"})
+            
 
 class NewsletterUsersList(forms.ModelForm):
     class Meta:

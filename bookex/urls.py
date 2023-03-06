@@ -26,6 +26,7 @@ urlpatterns = [
     path('bookexapp/', include('bookexapp.urls')),
     path('signin/',views.signin, name='signin'),
     path('add_newsletter/',views.add_newsletter, name='add_newsletter'),
+    path('categories/',views.categories, name="categories"),
 
     # path('password_reset/', auth_views.PasswordResetView.as_view(template_name='bookexapp/password_reset.html')),
     # path('password_reset/', auth_views.PasswordResetCompleteView.as_view(template_name='bookexapp/password_reset.html'),name='password_reset'),

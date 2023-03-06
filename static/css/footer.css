@@ -3,7 +3,7 @@ footer .links {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     padding: 160px 140px 20px 140px;
-    justify-content: center;
+    align-items: center;
     column-gap: 2rem;
   }
   

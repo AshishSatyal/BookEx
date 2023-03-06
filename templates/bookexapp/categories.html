@@ -1,17 +1,104 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>categories</title>
-    <link rel="stylesheet" href="../../static/css/style.css">
+    <link rel="stylesheet" href="../../static/css/categories.css">
+     
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script type="module" src="../../static/javaScript/categories.js" defer></script>
 </head>
 <body>
     <nav></nav>
     <div class="hero-section">
-        <img src="" alt="">
+        <img src="https://images.unsplash.com/photo-1614791962365-7590111b1b1c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHJlYWRpbmclMjBib29rfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000&q=60" alt="">
     </div>
-    <div class="book-slider-section"></div>
+    <section class="book-category-section">
+        <div class="book-slider-container best-sellers">
+            <div class="slider-header">
+                <p class="title">Best sellers</p>
+                <div class="slider-btn">
+                    <button class="prev-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="next-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="slider">
+                <div class="book-container"></div>
+            </div>
+        </div>
+        <div class="book-slider-container new-arrivals">
+            <div class="slider-header">
+                <p class="title">New arrivals</p>
+                <div class="slider-btn">
+                    <button class="prev-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="next-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="slider">
+                <div class="book-container"></div>
+            </div>
+            </div>
+        </div>
+        <div class="book-slider-container nepali-books">
+            <div class="slider-header">
+                <p class="title">Nepali Books</p>
+                <div class="slider-btn">
+                    <button class="prev-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="next-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="slider">
+                <div class="book-container"></div>
+            </div>
+        </div>
+        <div class="book-slider-container recommendated-books">
+            <div class="slider-header">
+                <p class="title">Recommendations</p>
+                <div class="slider-btn">
+                    <button class="prev-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="next-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="slider">
+                <div class="book-container"></div>
+            </div>        </div>
+        <template class="book-template">
+            <div class="book-card">
+                <a href="" class="book-link">
+                    <div class="book-img-container">
+                        <img src="" alt="" class="book-img">
+                    </div>
+                    <p class="book-title"></p>
+                </a>
+                <i class="author"></i>
+                <button class="btn add-to-cart-btn">Add to cart</button>
+            </div>
+        </template>
+    </section>
 </body>
 </html>

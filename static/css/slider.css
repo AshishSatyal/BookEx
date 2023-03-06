@@ -81,7 +81,7 @@ a{
     cursor: pointer;
 }
   
-.title {
+.book-title {
     --max-lines: 1; /*  no. of lines we want*/
     display: -webkit-box; /* to use web-kit properties...*/
     overflow: hidden;

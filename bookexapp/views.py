@@ -7,6 +7,7 @@ from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.core.mail import EmailMultiAlternatives
 from django.utils.html import strip_tags
+
 from .models import NewsletterUsersList
 from django.shortcuts import redirect
 # Create your views here.
@@ -51,10 +52,9 @@ def signup(request):
             # email.send()
             
             return HttpResponseRedirect('/signup/')
-        
 
-        else:
-            print(user_form.errors)
+        # else:
+        #     print(user_form.errors)
 
     else:
         user_form = UserForm()
@@ -91,3 +91,7 @@ def add_newsletter(request):
         new_customer.save()
 
         return redirect('landingpage')
+    
+def categories(request):
+    if request.method  == "GET":
+        return render(request, 'bookexapp/categories.html')
