@@ -91,3 +91,7 @@ def add_newsletter(request):
         new_customer.save()
 
         return redirect('landingpage')
+    
+def categories(request):
+    if request.method  == "GET":
+        return render(request, 'bookexapp/categories.html')
