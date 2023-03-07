@@ -30,28 +30,7 @@ ALLOWED_HOSTS = []
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-# For sending welcome emails via Gmail
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = 'team.bookex@gmail.com'
-# EMAIL_HOST_PASSWORD = 'uwnurddsarckqssh'
-
-
-# For sending welcome emails via Sendinblue
-# EMAIL_HOST = 'smtp-relay.sendinblue.com'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = 'disyou2134@gmail.com'
-# EMAIL_HOST_PASSWORD = 'vPzgb98HOFw5BGKr'
-
-
-# For sending welcome emails via ElasticEmail
-EMAIL_HOST = 'smtp.elasticemail.com'
-EMAIL_PORT = 2525
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'team.bookex@gmail.com'
-EMAIL_HOST_PASSWORD = 'B092488B701387ADBDDF716ADE06D30C0CEB'
+#Add SMTP server here
 
 DEFAULT_FROM_EMAIL = 'team.bookex@gmail.com'
 # Application definition
