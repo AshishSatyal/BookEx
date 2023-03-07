@@ -28,6 +28,8 @@ urlpatterns = [
     path('add_newsletter/',views.add_newsletter, name='add_newsletter'),
     path('categories/',views.categories, name="categories"),
 
+     path('category-data/', views.categories, name='category-data'),
+
     # path('password_reset/', auth_views.PasswordResetView.as_view(template_name='bookexapp/password_reset.html')),
     # path('password_reset/', auth_views.PasswordResetCompleteView.as_view(template_name='bookexapp/password_reset.html'),name='password_reset'),
     # path('password_reset/done/', auth_views.PasswordResetCompleteView.as_view(template_name='bookexapp/password_reset_done.html'),name='password_reset_done'),

@@ -1,47 +1,55 @@
 // import { sliderControl } from "./landingPage";  // importing sliderControl function from landingPage.js file
 
-const bookDetails = [
-    {
-     img: "book_img_1.png",
-     title: "your heart is the sea",
-     author: "Nikita Gill"
-    },
-    {
-     img: "book_img_2.png",
-     title: "little black book",
-     author: "Otecha Uwagba"
-    },
-    {
-     img: "book_img_3.png",
-     title: "guess how much i love you in the autumn",
-     author: "Sam McBratney"
-    },
-    {
-     img: "book_img_4.png",
-     title: "the north and north wales independent coffee guide",
-     author: "Anonymous"
-    },
-    {
-     img: "book_img_5.png",
-     title: "the catcher in the rye",
-     author: "Ld Salinger"
-    },
-    {
-     img: "book_img_6.png",
-     title: "your soul is a river",
-     author: "Nikita Gill"       
-     },
-    {
-     img: "book_img_7.png",
-     title: "Lagom",
-     author: "Manehbkar Khnta"
-    },
-    {
-     img: "book_img_1.png",
-     title: "your heart is the sea",
-     author: "Nikita Gill"
-    }
-]
+
+const categoriesData = JSON.parse(document.querySelector('#categories-data').dataset.categories);
+console.log(categoriesData.categories);
+
+const bookDetails = categoriesData.categories
+
+// const bookDetails = [
+    // {
+    // //  img: "book_img_1.png",
+    // // title: "your heart is the sea",
+    //  img: image,
+    //  title: title,
+    //  author: author
+    // },
+    // {
+    //  img: "book_img_2.png",
+    //  title: "little black book",
+    //  author: "Otecha Uwagba"
+    // },
+    // {
+    //  img: "book_img_3.png",
+    //  title: "guess how much i love you in the autumn",
+    //  author: "Sam McBratney"
+    // },
+    // {
+    //  img: "book_img_4.png",
+    //  title: "the north and north wales independent coffee guide",
+    //  author: "Anonymous"
+    // },
+    // {
+    //  img: "book_img_5.png",
+    //  title: "the catcher in the rye",
+    //  author: "Ld Salinger"
+    // },
+    // {
+    //  img: "book_img_6.png",
+    //  title: "your soul is a river",
+    //  author: "Nikita Gill"       
+    //  },
+    // {
+    //  img: "book_img_7.png",
+    //  title: "Lagom",
+    //  author: "Manehbkar Khnta"
+    // },
+    // {
+    //  img: "book_img_1.png",
+    //  title: "your heart is the sea",
+    //  author: "Nikita Gill"
+    // }
+// ]
 
 // checking browser support...
 if ('content' in document.createElement('template')) {
@@ -60,7 +68,7 @@ if ('content' in document.createElement('template')) {
                 let bookAuthor = clone.querySelector('.author');
                 let addToCartBtn = clone.querySelector('.add-to-cart-btn');
                 
-                bookImg.src = `../../static/images/${book.img}`;
+                bookImg.src = `../${book.img}`;
                 bookTitle.textContent = book.title;
                 bookAuthor.textContent = book.author;
                 bookLink.title = book.title.toUpperCase();

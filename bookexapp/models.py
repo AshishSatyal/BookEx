@@ -6,3 +6,11 @@ class NewsletterUsersList(models.Model):
     
     def __str__(self):
         return self.email
+    
+class BestSellerBooks(models.Model):
+       img = models.ImageField(upload_to = "static/images/")
+       title = models.CharField(max_length=100)
+       author = models.CharField(max_length=50)
+
+       def __str__(self):
+            return self.title

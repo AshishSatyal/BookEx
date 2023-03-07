@@ -8,8 +8,12 @@ from django.template.loader import render_to_string
 from django.core.mail import EmailMultiAlternatives
 from django.utils.html import strip_tags
 
-from .models import NewsletterUsersList
+from .models import NewsletterUsersList,BestSellerBooks
 from django.shortcuts import redirect
+
+from django.core import serializers
+from django.http import JsonResponse
+import json
 # Create your views here.
 
 # basic views only to check if it works
@@ -92,6 +96,18 @@ def add_newsletter(request):
 
         return redirect('landingpage')
     
+# def categories(request):
+#     # book_details = BestSellerBooks.objects.all
+#     # return render(request, 'bookexapp/categories.html',{'BestSellingBooks':book_details})
+
+#     categories = BestSellerBooks.objects.all()
+#     data = {'categories': list(categories.values())}
+#     test =  JsonResponse(data)
+#     print(test)
+#     return render(request, 'bookexapp/categories.html',{'categories':categories})
+
 def categories(request):
-    if request.method  == "GET":
-        return render(request, 'bookexapp/categories.html')
+    categories = BestSellerBooks.objects.all().values('id', 'img', 'title','author')
+    categories_dict = {'categories': list(categories)}
+    categories_json = json.dumps(categories_dict)
+    return render(request, 'bookexapp/categories.html', {'categories_json': categories_json})

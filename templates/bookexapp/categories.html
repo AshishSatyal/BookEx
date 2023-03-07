@@ -16,8 +16,18 @@
       referrerpolicy="no-referrer"
     />
     <script type="module" src="../../static/javaScript/categories.js" defer></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
 </head>
 <body>
+
+    <div id="categories-data" data-categories="{{ categories_json }}"></div>
+    <script src="{% static 'javaScript/categories.js' %}"></script>
+
     <nav></nav>
     <div class="hero-section">
         <img src="https://images.unsplash.com/photo-1614791962365-7590111b1b1c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHJlYWRpbmclMjBib29rfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000&q=60" alt="">
@@ -87,6 +97,7 @@
             <div class="slider">
                 <div class="book-container"></div>
             </div>        </div>
+
         <template class="book-template">
             <div class="book-card">
                 <a href="" class="book-link">
@@ -99,6 +110,14 @@
                 <button class="btn add-to-cart-btn">Add to cart</button>
             </div>
         </template>
+
+        <div id="category-list">
+            {% for category in categories %}
+                <li class="db-img">{{ category.img|safe }}</li>
+                <li class="db-title">{{ category.title|safe }}</li>
+                <li class="db-author">{{ category.author|safe }}</li>
+            {% endfor %}
+        </div>
     </section>
 </body>
 </html>

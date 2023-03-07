@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
-from .models import NewsletterUsersList
+from .models import NewsletterUsersList, BestSellerBooks
 
 class UserForm(forms.ModelForm):
     username = forms.CharField(widget=forms.TextInput(attrs={'placeholder':'Enter your username'}))
@@ -23,6 +23,11 @@ class UserForm(forms.ModelForm):
             
 
 class NewsletterUsersList(forms.ModelForm):
-    class Meta:
+    class Meta():
         model = NewsletterUsersList
         fields = ['email']
+
+class BestSellerBooks(forms.ModelForm):
+    class Meta():
+        model = BestSellerBooks
+        fields = ('img', 'title', 'author')
